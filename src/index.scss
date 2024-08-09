@@ -13,7 +13,6 @@ body {
   font-weight: $inter-regular;
   height: 100vh;
   background-color: $color-dark;
-  overflow: hidden;
 }
 
 h1,
@@ -64,11 +63,11 @@ h6 {
         50%
       )
       no-repeat;
-      mix-blend-mode: var(--blending);
-      width: var(--circle-size);
-      height: var(--circle-size);
-      top: calc(50% - var(--circle-size)/2);
-      left: calc(50% - var(--circle-size)/2);
-      opacity: 1;
+    mix-blend-mode: var(--blending);
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+    opacity: 1;
   }
 }

@@ -1,0 +1,104 @@
+@import "../../../assets//sass/_variables.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  font-family: $font-family-poppins;
+  align-items: center;
+  padding: 0.8rem 8rem;
+  background-color: $color-dark;
+  color: #fff;
+  box-shadow: 0px 0px 10px rgb(113, 43, 170);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    padding: 0.8rem 3rem;
+  }
+
+  &_logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    &_img {
+      height: 50px;
+    }
+  }
+
+  &_toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  &_links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    font-family: $font-family-poppins;
+    @media (max-width: 768px) {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: $color-dark;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+      //   box-shadow: 0px 0px 10px rgb(113, 43, 170);
+      box-shadow: 0px 8px 10px rgba(113, 43, 170, 0.5); // Bottom shadow only
+    }
+  }
+
+  &_links_open {
+    display: flex;
+    align-items: center;
+  }
+
+  &_links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-family: $font-family-poppins;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      color: rgba(221, 214, 214, 0.836);
+    }
+  }
+
+  &_toggle .bar,
+  &_toggle .bar_open {
+    width: 24px;
+    height: 3px;
+    background-color: #fff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  &_toggle .bar_open:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  &_toggle .bar_open:nth-child(2) {
+    opacity: 0;
+  }
+
+  &_toggle .bar_open:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  @media (max-width: 768px) {
+    &_toggle {
+      display: flex;
+    }
+  }
+}
