@@ -14,13 +14,13 @@ const Navbar = () => {
 
   useGSAP(() => {
     const timeline = gsap.timeline();
-    timeline.from(`${styles.navbar_logo}`, {
+    timeline.from(`#brand`, {
       y: -100,
       duration: 1,
-      delay: 0.5, 
+      delay: 0.5,
     });
 
-    timeline.from(`${styles.navbar_toggle}`, {
+    timeline.from(`#navlinks`, {
       y: -100,
       opacity: 0.3,
       duration: 1,
@@ -32,7 +32,12 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbar_logo}>
-        <img src={logo} alt="qrio" className={styles.navbar_logo_img} />
+        <img
+          id="brand"
+          src={logo}
+          alt="qrio"
+          className={styles.navbar_logo_img}
+        />
       </div>
       <div className={styles.navbar_toggle} onClick={toggleNavbar}>
         <span className={isOpen ? styles.bar_open : styles.bar}></span>
@@ -44,24 +49,36 @@ const Navbar = () => {
           isOpen ? styles.navbar_links_open : ""
         }`}
       >
-        <li>
-          <Link to="/qrio-ui">Home</Link>
+        <li id="navlinks">
+          <Link to="/qrio-ui" onClick={toggleNavbar}>
+            Home
+          </Link>
         </li>
-        <li>
-          <Link to="/qrio-ui/about">About</Link>
+        <li id="navlinks">
+          <Link to="/qrio-ui/about" onClick={toggleNavbar}>
+            About
+          </Link>
         </li>
 
-        <li>
-          <Link to="/qrio-ui/services">Services</Link>
+        <li id="navlinks">
+          <Link to="/qrio-ui/services" onClick={toggleNavbar}>
+            Services
+          </Link>
         </li>
-        <li>
-          <Link to="/qrio-ui/contact">Contact</Link>
+        <li id="navlinks">
+          <Link to="/qrio-ui/contact" onClick={toggleNavbar}>
+            Contact
+          </Link>
         </li>
-        <li>
-          <Link to="/qrio-ui/blog">Blog</Link>
+        <li id="navlinks">
+          <Link to="/qrio-ui/blog" onClick={toggleNavbar}>
+            Blog
+          </Link>
         </li>
-        <li>
-          <Link to="/qrio-ui/portfolio">Portfolio</Link>
+        <li id="navlinks">
+          <Link to="/qrio-ui/portfolio" onClick={toggleNavbar}>
+            Portfolio
+          </Link>
         </li>
       </ul>
     </nav>
