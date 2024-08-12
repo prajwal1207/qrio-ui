@@ -10,7 +10,6 @@
   background-color: rgba($color-dark, 0.7);
   position: fixed;
   top: 0;
-  border-radius: 0 0 10px 10px;
   width: 100%;
   z-index: 999;
   padding: 0.2rem 0rem;
@@ -18,22 +17,23 @@
   // border-radius: 0 0 20px 20px;
   // box-shadow: 0px 0px 10px rgb(113, 43, 170);
   //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
+  
   @media (max-width: 768px) {
     border: none;
     // padding: 0.8rem 3rem;
   }
-
+  
   &_logo {
     font-size: 1.5rem;
     font-weight: bold;
-
+    
     &_img {
       height: 50px;
     }
   }
-
+  
   &_toggle {
+    
     display: none;
     flex-direction: column;
     justify-content: space-between;
