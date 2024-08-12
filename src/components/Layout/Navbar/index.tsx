@@ -23,8 +23,8 @@ const Navbar = () => {
     timeline.from(`#navlinks`, {
       y: -100,
       opacity: 0.3,
-      duration: 1,
-      delay: 0.5,
+      duration: 0.5,
+      delay: 0,
       stagger: 0.2,
     });
   });
