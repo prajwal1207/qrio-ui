@@ -13,7 +13,7 @@ const Layout = () => {
   const audioRef: any = useRef(new Audio(song));
 
   useEffect(() => {
-    (async() => {
+    (async () => {
       if (audioRef.current) {
         const res = await audioRef.current.play();
         console.log({ audioRef, res });

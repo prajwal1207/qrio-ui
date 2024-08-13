@@ -20,7 +20,7 @@ const Navbar = () => {
       delay: 0.5,
     });
 
-    timeline.from(`#navlinks`, {
+    timeline.from(`.nlink`, {
       y: -100,
       opacity: 0.3,
       duration: 0.5,
@@ -29,60 +29,66 @@ const Navbar = () => {
     });
   });
 
+  // <nav className={styles.navbar}>
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.navbar_logo}>
-        <img
-          id="brand"
-          src={logo}
-          alt="qrio"
-          className={styles.navbar_logo_img}
-        />
-      </div>
-      <div className={styles.navbar_toggle} onClick={toggleNavbar}>
-        <span className={isOpen ? styles.bar_open : styles.bar}></span>
-        <span className={isOpen ? styles.bar_open : styles.bar}></span>
-        <span className={isOpen ? styles.bar_open : styles.bar}></span>
-      </div>
-      <ul
-        className={`${styles.navbar_links} ${
-          isOpen ? styles.navbar_links_open : ""
-        }`}
+    <header className={styles.navbar}   >
+      <nav
+        className={`container flex justify-between items-center p-2 ${styles.navbar_wrapper}`}
       >
-        <li id="navlinks">
-          <Link to="/qrio-ui" onClick={toggleNavbar}>
-            Home
-          </Link>
-        </li>
-        <li id="navlinks">
-          <Link to="/qrio-ui/about" onClick={toggleNavbar}>
-            About
-          </Link>
-        </li>
+        <div className={styles.navbar_logo}>
+          <img
+            id="brand"
+            src={logo}
+            alt="qrio"
+            className={styles.navbar_logo_img}
+          />
+        </div>
+        <div className={styles.navbar_toggle} onClick={toggleNavbar}>
+          <span className={isOpen ? styles.bar_open : styles.bar}></span>
+          <span className={isOpen ? styles.bar_open : styles.bar}></span>
+          <span className={isOpen ? styles.bar_open : styles.bar}></span>
+        </div>
+        <ul
+          className={`${styles.navbar_links} ${
+            isOpen ? styles.navbar_links_open : ""
+          }`}
+        >
+          <li className="nlink">
+            <Link to="/qrio-ui" onClick={toggleNavbar}>
+              Home
+            </Link>
+          </li>
+          <li className="nlink">
+            <Link to="/qrio-ui/about" onClick={toggleNavbar}>
+              About
+            </Link>
+          </li>
 
-        <li id="navlinks">
-          <Link to="/qrio-ui/services" onClick={toggleNavbar}>
-            Services
-          </Link>
-        </li>
-        <li id="navlinks">
-          <Link to="/qrio-ui/contact" onClick={toggleNavbar}>
-            Contact
-          </Link>
-        </li>
-        <li id="navlinks">
-          <Link to="/qrio-ui/blog" onClick={toggleNavbar}>
-            Blog
-          </Link>
-        </li>
-        <li id="navlinks">
-          <Link to="/qrio-ui/portfolio" onClick={toggleNavbar}>
-            Portfolio
-          </Link>
-        </li>
-      </ul>
-    </nav>
+          <li className="nlink">
+            <Link to="/qrio-ui/services" onClick={toggleNavbar}>
+              Services
+            </Link>
+          </li>
+          <li className="nlink">
+            <Link to="/qrio-ui/contact" onClick={toggleNavbar}>
+              Contact
+            </Link>
+          </li>
+          <li className="nlink">
+            <Link to="/qrio-ui/blog" onClick={toggleNavbar}>
+              Blog
+            </Link>
+          </li>
+          <li className="nlink">
+            <Link to="/qrio-ui/portfolio" onClick={toggleNavbar}>
+              Portfolio
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 
 export default Navbar;
+

@@ -11,7 +11,7 @@ const RandomBlinkingStars = () => {
 
   // Generate random times for blinking with a very slow interval
   const blinkTimes = useMemo(() => {
-    const times = new Float32Array(5000); // Adjust the count if needed
+    const times = new Float32Array(7000); // Adjust the count if needed
     for (let i = 0; i < times.length; i++) {
       times[i] = Math.random() * 15 + 10; // Random blink interval between 10 and 25 seconds
     }
@@ -28,7 +28,7 @@ const RandomBlinkingStars = () => {
 
   // Generate star positions with an even distribution
   const starPositions = useMemo(() => {
-    const positions = new Float32Array(5000 * 3);
+    const positions = new Float32Array(7000 * 3);
     const radius = 50; // Radius of the sphere
     for (let i = 0; i < 5000; i++) {
       // Randomly distribute stars in a spherical volume

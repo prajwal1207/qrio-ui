@@ -1,15 +1,17 @@
+import { GalaxyParallax } from "../../components/Gaxaxy";
 
 const AboutPage = () => {
   return (
-    <div>
-      <h1>about</h1>
-    </div>
+    <main>
+      <GalaxyParallax>
+        <section className="h-screen flex items-center justify-center"></section>
+        <section className="h-screen flex items-center justify-center"></section>
+      </GalaxyParallax>
+    </main>
   );
 };
 
 export default AboutPage;
-
-
 
 // function Atom(props:any) {
 //   const points = useMemo(
