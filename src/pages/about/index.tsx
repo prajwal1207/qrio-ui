@@ -67,8 +67,6 @@ const AboutPage = () => {
 
 export default AboutPage;
 
-
-
 // function Atom(props:any) {
 //   const points = useMemo(
 //     () =>
