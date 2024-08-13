@@ -36,12 +36,14 @@ const Navbar = () => {
         className={`container flex justify-between items-center p-2 ${styles.navbar_wrapper}`}
       >
         <div className={styles.navbar_logo}>
+          <a href="/qrio-ui/">
           <img
             id="brand"
             src={logo}
             alt="qrio"
             className={styles.navbar_logo_img}
-          />
+            />
+            </a>
         </div>
         <div className={styles.navbar_toggle} onClick={toggleNavbar}>
           <span className={isOpen ? styles.bar_open : styles.bar}></span>

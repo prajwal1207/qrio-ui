@@ -5,13 +5,14 @@
   align-items: center;
   justify-content: center;
   font-family: $font-family-poppins;
-  border-bottom: 1px solid rgb(138, 138, 138, 0.6);
+  // border-bottom: 1px solid rgb(138, 138, 138, 0.6);
+  // border-radius: 20px;
   background-color: rgba($color-dark, 0.8);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  // padding: 0.8rem 8rem;
+  padding: 0.2rem 0rem;
   // color: #fff;
   // border-radius: 0 0 20px 20px;
   // box-shadow: 0px 0px 10px rgb(113, 43, 170);
@@ -21,7 +22,6 @@
     border: none;
     // padding: 0.8rem 3rem;
   }
-
 
   &_logo {
     font-size: 1.5rem;
@@ -42,6 +42,7 @@
 
   &_links {
     list-style: none;
+
     display: flex;
     gap: 1rem;
     margin: 0;
@@ -68,6 +69,28 @@
     align-items: center;
   }
 
+  // &_links li a {
+  //   color: #fff;
+  //   text-decoration: none;
+  //   padding: 0.5rem 1rem;
+  //   font-family: $font-family-poppins;
+  //   font-weight: 600;
+  //   border-radius: 4px;
+  //   transition: background-color 0.3s ease;
+  //   font-size: 18px;
+
+  //   &:hover {
+  //     background: linear-gradient(
+  //       to right,
+  //       #ff00ff,
+  //       #ff69b4
+  //     ); /* Gradient on hover */
+  //     color: transparent; /* Make the text transparent to show the background gradient */
+  //     -webkit-background-clip: text;
+  //     background-clip: text;
+  //   }
+  // }
+
   &_links li a {
     color: #fff;
     text-decoration: none;
@@ -75,20 +98,36 @@
     font-family: $font-family-poppins;
     font-weight: 600;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     font-size: 18px;
-
+    position: relative; /* Required for positioning the pseudo-element */
+  
     &:hover {
-      background: linear-gradient(
-        to right,
-        #ff00ff,
-        #ff69b4
-      ); /* Gradient on hover */
+      background: linear-gradient(to right, #ff00ff, #ff69b4); /* Gradient on hover */
       color: transparent; /* Make the text transparent to show the background gradient */
       -webkit-background-clip: text;
       background-clip: text;
     }
+  
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px; /* Thickness of the underline */
+      bottom: 0; /* Position it at the bottom */
+      left: 0;
+      background-color: #5e5e5e; /* Color of the underline */
+      transform: scaleX(0); /* Start with the underline hidden */
+      transform-origin: bottom right; /* Scale from the right */
+      transition: transform 0.3s ease-out; /* Animate the scaling */
+    }
+  
+    &:hover::after {
+      transform: scaleX(1); /* Show the underline on hover */
+      transform-origin: bottom left; /* Scale to the left */
+    }
   }
+  
 
   &_toggle .bar,
   &_toggle .bar_open {
