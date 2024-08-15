@@ -1,7 +1,9 @@
 .content {
   flex: 1;
-  margin-top: 60px; /* Adjust based on your navbar height */
-  margin-bottom: 40px; /* Adjust based on your footer height */
+  margin-top: 70px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  overflow-y: hidden;
+  // width: 50vw;
   // padding: 20px;
-  overflow-y: auto;
 }

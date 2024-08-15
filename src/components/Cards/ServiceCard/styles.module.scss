@@ -1,0 +1,53 @@
+@import "../../../assets//sass//variables";
+.card {
+  margin: 0 auto;
+  padding: 2em;
+  width: 350px;
+  height: 300px;
+  background-color: #0d111d;
+  //   background-color: #171d31;
+  //   background-color:rgb($color-dark,0.95);
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  height: 103%;
+  width: 103%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 10px;
+  border-radius: 10px;
+  filter: blur(0.2rem);
+  animation: 3s spin linear infinite;
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent,
+    80%,
+    #6a0dad,
+    #d63384,
+    #ff00ff,
+    #6a0dad
+  );
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: 360deg;
+  }
+}
