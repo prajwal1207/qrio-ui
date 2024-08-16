@@ -15,6 +15,7 @@ const Layout = () => {
   useEffect(() => {
     (async () => {
       if (audioRef.current) {
+        audioRef.current.volume = 0.1;
         const res = await audioRef.current.play();
         console.log({ audioRef, res });
       }
