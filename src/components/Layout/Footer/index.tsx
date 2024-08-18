@@ -1,5 +1,6 @@
 import { BsTelephone } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
+import { FaWhatsapp } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { IoArrowRedo } from "react-icons/io5";
 import { MdOutlineMail } from "react-icons/md";
