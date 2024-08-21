@@ -101,7 +101,9 @@ export const GalaxyParallax = ({ children }: GalaxyParallaxProps) => {
       >
         <RandomBlinkingStars />
       </Canvas>
-      <div style={{ position: "relative", zIndex: 1 }}>{children}</div>
+      <div 
+      style={{ position: "relative", zIndex: 1 }}
+      >{children}</div>
     </div>
   );
 };

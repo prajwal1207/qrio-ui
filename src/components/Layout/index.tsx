@@ -1,3 +1,4 @@
+import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
 import { CgScrollV } from "react-icons/cg";
 import { FaPause } from "react-icons/fa";
@@ -11,6 +12,27 @@ import styles from "./styles.module.scss";
 const Layout = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const audioRef: any = useRef(new Audio(song));
+  const cursorRefBlue = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const body = document.querySelector("body");
+    const handleMouseMove = (event: MouseEvent) => {
+      if (cursorRefBlue.current) {
+        gsap.to(cursorRefBlue.current, {
+          x: event.clientX,
+          y: event.clientY,
+          duration: 0.2,
+          ease: "power2.out",
+        });
+      }
+    };
+
+    body?.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      body?.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   useEffect(() => {
     (async () => {
@@ -40,6 +62,20 @@ const Layout = () => {
 
   return (
     <>
+      <div
+        id="cursor"
+        ref={cursorRefBlue}
+        className="fixed h-6 w-6 bg-custom-gradient-2 rounded-full pointer-events-none"
+        style={{
+          // zIndex: 1000,
+          boxShadow: `
+      0 0 10px rgba(0, 122, 255, 0.8), 
+      0 0 20px rgba(0, 122, 255, 0.6), 
+      0 0 30px rgba(0, 122, 255, 0.4), 
+      0 0 40px rgba(0, 122, 255, 0.2)`,
+          filter: "blur(2.1em)",
+        }}
+      ></div>
       <Navbar />
       <main className={styles.content}>
         <Outlet />

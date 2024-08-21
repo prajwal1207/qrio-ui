@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import logo from "../../assets/images/8793760.png";
 import ServiceCard from "../../components/Cards/ServiceCard";
 import { GalaxyParallax } from "../../components/Gaxaxy";
+import TestimonialCarousel from "../../components/Testimonials";
 import styles from "./styles.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -57,18 +58,14 @@ const HomePage = () => {
     });
   });
 
+  const dataText = `Welcome to qrio ...`;
   return (
     <main>
       <GalaxyParallax>
         <section className="min-h-screen h-auto container mx-auto flex flex-col lg:flex-row justify-center items-center">
           <div className="flex flex-col lg:flex-col p-16  justify-center w-full text-white">
-            <h1
-              data-text="Welcome to qrio ..."
-              className={styles.heading}
-              // className={`text-6xl md:text-8xl p-2 font-bold ${styles.heading}`}
-              // className={`text-5xl md:text-8xl p-2 font-bold text-fuchsia-600 ${styles.heading}`}
-            >
-              Welcome to qrio ...
+            <h1 data-text={dataText} className={styles.heading}>
+              {dataText}
             </h1>
             <span className="text-2xl md:text-5xl  text-gray-500">
               - Curating Your Brand!
@@ -171,9 +168,8 @@ const HomePage = () => {
           </div>
         </section>
       </GalaxyParallax>
-      <section className="bg-white h-screen mx-auto flex flex-wrap justify-center items-center">
+      <section className="bg-white min-h-screen h-auto mx-auto flex flex-wrap flex-col justify-center items-center">
         <div className="container">
-          {" "}
           <h1 className="text-blue-700 text-6xl md:text-6xl p-2 font-bold">
             What our client said about us
           </h1>
@@ -185,7 +181,9 @@ const HomePage = () => {
             really not there).
           </p>
         </div>
-        <div></div>
+        <div  className="" >
+          <TestimonialCarousel />
+        </div>
       </section>
     </main>
   );
