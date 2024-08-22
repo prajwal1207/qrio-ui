@@ -17,6 +17,9 @@ export default {
       colors: {
         customBlue: "#020c14",
       },
+      colors: {
+        customBlue: '#020c14',
+      },
     },
   },
   plugins: [],
