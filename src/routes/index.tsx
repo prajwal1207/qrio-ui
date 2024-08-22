@@ -12,7 +12,6 @@ const Routing: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Shared layout with nested routes */}
         <Route path="/qrio-ui" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="about" element={<AboutPage />} />
@@ -20,7 +19,6 @@ const Routing: React.FC = () => {
           <Route path="blog" element={<BlogPage />} />
           <Route path="portfolio" element={<PortfolioPage />} />
           <Route path="services" element={<ServicesPage />} />
-          {/* Add more routes here */}
         </Route>
       </Routes>
     </BrowserRouter>

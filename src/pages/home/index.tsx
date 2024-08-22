@@ -6,6 +6,8 @@ import ServiceCard from "../../components/Cards/ServiceCard";
 import { GalaxyParallax } from "../../components/Gaxaxy";
 import TestimonialCarousel from "../../components/Testimonials";
 import styles from "./styles.module.scss";
+import { SiTruenas } from "react-icons/si";
+import { services } from "../../constants/constant";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,6 +46,16 @@ const HomePage = () => {
         toggleActions: "play reverse play reverse",
       },
     });
+    const tl = gsap.timeline();
+    tl.from("#banner_text", {
+      y: 50,
+      opacity: 0,
+    });
+    tl.from("#banner_desc", {
+      y: 50,
+      opacity: 0,
+      stagger: 0.3,
+    });
 
     gsap.from("#sec4", {
       x: 1000,
@@ -58,19 +70,22 @@ const HomePage = () => {
     });
   });
 
-  const dataText = `Welcome to qrio ...`;
+
   return (
     <main>
       <GalaxyParallax>
         <section className="min-h-screen h-auto container mx-auto flex flex-col lg:flex-row justify-center items-center">
           <div className="flex flex-col lg:flex-col p-16  justify-center w-full text-white">
-            <h1 data-text={dataText} className={styles.heading}>
-              {dataText}
+            <h1 data-text="Welcome to qrio ..." className={styles.heading}>
+              Welcome to qrio ...
             </h1>
-            <span className="text-2xl md:text-5xl  text-gray-500">
-              - Curating Your Brand!
+            <span
+              id="banner_text"
+              className="text-2xl md:text-5xl  text-gray-100"
+            >
+              Curating Your Brand!
             </span>
-            <p className="text-xl md:text-4xl py-2">
+            <p id="banner_desc" className="text-xl md:text-3xl py-2">
               Discover Qrio, where creativity meets quirky, and marketing
               strategies come with a side of pizzazz. Dive into a world where
               your brand doesn’t just grow, it thrives with flair!
@@ -139,17 +154,13 @@ const HomePage = () => {
           <h1 className="text-white   text-5xl md:text-6xl p-2 font-bold">
             Quick snapshots of services offered
           </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20">
-            <ServiceCard />
-            <ServiceCard />
-            <ServiceCard />
-            <ServiceCard />
-            <ServiceCard />
-            <ServiceCard />
+          <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 ${styles.service_wrapper}`}>
+            {services.map((item, index: number) => {
+              return <ServiceCard key={index} {...item} />;
+            })}
           </div>
         </section>
-
-        <section className="min-h-screen h-auto container mx-auto flex flex-col lg:flex-row justify-center items-center">
+        <section className=" min-h-screen h-auto container mx-auto flex flex-col lg:flex-row justify-center items-center">
           <div className="flex flex-col lg:flex-row justify-center w-full">
             <div className="flex text-center flex-col w-full lg:w-1/2  text-white p-8 md:p-28 lg:text-left  tracking-wider">
               <h1 className="text-5xl md:text-6xl p-2 font-bold ">Why Qrio?</h1>
@@ -167,24 +178,19 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-      </GalaxyParallax>
-      <section className="bg-white min-h-screen h-auto mx-auto flex flex-wrap flex-col justify-center items-center">
-        <div className="container">
-          <h1 className="text-blue-700 text-6xl md:text-6xl p-2 font-bold">
-            What our client said about us
+        <section className="container min-h-screen h-auto mx-auto flex flex-wrap flex-col justify-center p-28 ">
+          <h1 className=" text-white text-6xl md:text-6xl  font-bold">
+            Our Testimonials
           </h1>
-          <p className="text-gray-700 text-xl md:text-xl py-5">
-            Here’s the deal: We're not just marketers; we're the Gandalfs of the
-            marketing world. We guide you through the perilous paths of digital
-            realms and traditional mazes, making sure you come out as the hero.
-            Why us? Because 'average' is not in our vocabulary (we checked, it’s
-            really not there).
+          <p className=" text-white text-xl md:text-2xl">
+            But don't just take our word for it. Hear from our clients who we've
+            helped reach the marketing hall of fame!
           </p>
-        </div>
-        <div  className="" >
-          <TestimonialCarousel />
-        </div>
-      </section>
+          <div className="w-full">
+            <TestimonialCarousel />
+          </div>
+        </section>
+      </GalaxyParallax>
     </main>
   );
 };

@@ -1,5 +1,7 @@
 @import "../../../assets//sass//variables";
 .card {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   padding: 2em;
   width: 350px;
@@ -12,42 +14,50 @@
   position: relative;
 }
 
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
+.card:hover{
+transform: scale(1.1);
+transition: ease-in-out;
+// box-shadow: rgba(226, 27, 226, 0.26) 0px 30px 90px;
+box-shadow: rgba(50, 6, 121, 0.46) 0px 30px 90px; 
+
 }
 
-.card::after {
-  content: "";
-  position: absolute;
-  height: 103%;
-  width: 103%;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  z-index: -1;
-  padding: 10px;
-  border-radius: 10px;
-  filter: blur(0.2rem);
-  animation: 3s spin linear infinite;
-  background-image: conic-gradient(
-    from var(--angle),
-    transparent,
-    80%,
-    #6a0dad,
-    #d63384,
-    #ff00ff,
-    #6a0dad
-  );
-}
+// @property --angle {
+//   syntax: "<angle>";
+//   initial-value: 0deg;
+//   inherits: false;
+// }
 
-@keyframes spin {
-  from {
-    --angle: 0deg;
-  }
+// .card::after {
+//   content: "";
+//   position: absolute;
+//   height: 103%;
+//   width: 103%;
+//   top: 50%;
+//   left: 50%;
+//   translate: -50% -50%;
+//   z-index: -1;
+//   padding: 10px;
+//   border-radius: 10px;
+//   filter: blur(0.2rem);
+//   animation: 3s spin linear infinite;
+//   background-image: conic-gradient(
+//     from var(--angle),
+//     transparent,
+//     80%,
+//     #6a0dad,
+//     #d63384,
+//     #ff00ff,
+//     #6a0dad
+//   );
+// }
 
-  to {
-    --angle: 360deg;
-  }
-}
+// @keyframes spin {
+//   from {
+//     --angle: 0deg;
+//   }
+
+//   to {
+//     --angle: 360deg;
+//   }
+// }

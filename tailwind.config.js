@@ -10,6 +10,9 @@ export default {
         "custom-gradient-2":
           "linear-gradient(90.4deg, rgb(248, 52, 246) 0.6%, rgb(152, 38, 252) 90%)",
       },
+      colors: {
+        customBlue: '#020c14',
+      },
     },
   },
   plugins: [],

@@ -62,20 +62,20 @@ const Layout = () => {
 
   return (
     <>
-      <div
-        id="cursor"
+      {/* <div
+        id={styles.cursor}
         ref={cursorRefBlue}
         className="fixed h-6 w-6 bg-custom-gradient-2 rounded-full pointer-events-none"
-        style={{
-          // zIndex: 1000,
-          boxShadow: `
-      0 0 10px rgba(0, 122, 255, 0.8), 
-      0 0 20px rgba(0, 122, 255, 0.6), 
-      0 0 30px rgba(0, 122, 255, 0.4), 
-      0 0 40px rgba(0, 122, 255, 0.2)`,
-          filter: "blur(2.1em)",
-        }}
-      ></div>
+      //   style={{
+      //     // zIndex: 1000,
+      //     boxShadow: `
+      // 0 0 10px rgba(0, 122, 255, 0.8), 
+      // 0 0 20px rgba(0, 122, 255, 0.6), 
+      // 0 0 30px rgba(0, 122, 255, 0.4), 
+      // 0 0 40px rgba(0, 122, 255, 0.2)`,
+      //     filter: "blur(2.1em)",
+      //   }}
+      ></div> */}
       <Navbar />
       <main className={styles.content}>
         <Outlet />

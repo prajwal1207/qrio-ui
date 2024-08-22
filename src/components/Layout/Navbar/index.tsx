@@ -29,7 +29,6 @@ const Navbar = () => {
     });
   });
 
-  // <nav className={styles.navbar}>
   return (
     <header className={styles.navbar}>
       <nav

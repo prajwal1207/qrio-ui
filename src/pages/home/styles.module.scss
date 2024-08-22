@@ -1,5 +1,56 @@
 @import "../../assets/sass/variables";
 
+.service_wrapper{
+position: relative;
+background-color: $color-dark;
+padding: 50px;
+border-radius: 10px;
+// filter: blur(1.2rem);
+}
+
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.service_wrapper::after {
+  content: "";
+  position: absolute;
+  height: 102%;
+  width: 102%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 10px;
+  border-radius: 10px;
+  filter: blur(0.5rem);
+  animation: 3s spin linear infinite;
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent,
+    80%,
+    #6a0dad,
+    #d63384,
+    #ff00ff,
+    #6a0dad
+  );
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: 360deg;
+  }
+}
+
+
+
 // .heading {
 //   position: relative;
 //   display: inline-flex;
