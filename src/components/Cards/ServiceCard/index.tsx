@@ -43,8 +43,8 @@ const ServiceCard = (props: any) => {
           ref={iconRef}
         />
       </span>
-      <h2 className="m-2 text-lg font-bold text-white">{props.title}</h2>
-      <p className="text-white">{props.desc}</p>
+      <h2 className="m-2 text-lg font-bold text-fuchsia-500">{props.title}</h2>
+      <p className="text-gray-200">{props.desc}</p>
     </div>
   );
 };

@@ -15,16 +15,16 @@ const Navbar = () => {
   useGSAP(() => {
     const timeline = gsap.timeline();
     timeline.from(`#brand`, {
-      y: -100,
+      y: -40,
+      opacity:0,
       duration: 1,
       delay: 0.5,
     });
 
     timeline.from(`.nlink`, {
-      y: -100,
-      opacity: 0.3,
-      duration: 0.5,
-      delay: 0,
+      y: -40,
+      opacity: 0,
+      duration: 0.3,
       stagger: 0.2,
     });
   });

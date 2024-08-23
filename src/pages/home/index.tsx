@@ -6,7 +6,6 @@ import ServiceCard from "../../components/Cards/ServiceCard";
 import { GalaxyParallax } from "../../components/Gaxaxy";
 import TestimonialCarousel from "../../components/Testimonials";
 import styles from "./styles.module.scss";
-import { SiTruenas } from "react-icons/si";
 import { services } from "../../constants/constant";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -14,8 +13,9 @@ gsap.registerPlugin(ScrollTrigger);
 const HomePage = () => {
   useGSAP(() => {
     gsap.from("#sec1", {
-      x: -1000,
+      x: -300,
       duration: 1,
+      opacity: 0,
       scrollTrigger: {
         trigger: "#section2",
         // markers: true,
@@ -25,8 +25,9 @@ const HomePage = () => {
       },
     });
     gsap.from("#sec2", {
-      x: 1000,
-      duration: 1,
+      x: 300,
+      opacity: 0,
+      duration: 1.5,
       scrollTrigger: {
         trigger: "#section2",
         // markers: true,
@@ -36,7 +37,8 @@ const HomePage = () => {
       },
     });
     gsap.from("#sec3", {
-      x: -1000,
+      x: -300,
+      opacity: 0,
       duration: 1,
       scrollTrigger: {
         trigger: "#section3",
@@ -46,34 +48,37 @@ const HomePage = () => {
         toggleActions: "play reverse play reverse",
       },
     });
+
+    gsap.from("#sec4", {
+      x: 300,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: "#section3",
+        // markers: true,
+        start: "top center",
+        end: "bottom center",
+        toggleActions: "play reverse play reverse",
+      },
+    });
+
     const tl = gsap.timeline();
     tl.from("#banner_text", {
       y: 50,
       opacity: 0,
+      duration: 1,
     });
     tl.from("#banner_desc", {
       y: 50,
       opacity: 0,
       stagger: 0.3,
     });
-
-    gsap.from("#sec4", {
-      x: 1000,
-      duration: 1,
-      scrollTrigger: {
-        trigger: "#section3",
-        // markers: true,
-        start: "top center",
-        end: "bottom center",
-        toggleActions: "play reverse play reverse",
-      },
-    });
   });
-
 
   return (
     <main>
       <GalaxyParallax>
+        {/* <-------------------------------- banner section --------------------------------------------->  */}
         <section className="min-h-screen h-auto container mx-auto flex flex-col lg:flex-row justify-center items-center">
           <div className="flex flex-col lg:flex-col p-16  justify-center w-full text-white">
             <h1 data-text="Welcome to qrio ..." className={styles.heading}>
@@ -92,6 +97,8 @@ const HomePage = () => {
             </p>
           </div>
         </section>
+        <hr className="line_break" />
+        {/* <--------------------------------  hero section --------------------------------------------->  */}
         <section
           id="section2"
           className="min-h-screen h-auto container mx-auto flex flex-col lg:flex-row justify-center items-center"
@@ -101,15 +108,14 @@ const HomePage = () => {
               id="sec1"
               className="flex text-center flex-col w-full lg:w-1/2  text-white p-8 md:p-28 lg:text-left  tracking-wider"
             >
-              <h1 className="text-5xl md:text-6xl p-2 font-bold ">
-                Welcome to Qrio
-              </h1>
+              <h1 className="text-5xl md:text-6xl p-2 font-bold ">About us</h1>
               <span className="text-2xl md:text-4xl">Curating Your Brand!</span>
               <p className="text-xl md:text-2xl py-5">
-                Experience the creative pulse of Qrio Marketing Agency. Dive
-                into our diverse range of services from digital marketing to
-                photography and see how we can elevate your brand's presence.
-                Explore our site to discover our innovative approach!
+                In a world full of 'meh,' Qrio stands out by not just thinking
+                outside the box but throwing the box out entirely. Founded on a
+                bright sunny day when we decided the world had enough of boring
+                marketing, we bring you bespoke strategies crafted with a dash
+                of whimsy and a lot of caffeine.
               </p>
             </div>
             <div
@@ -120,7 +126,8 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-
+        <hr className="line_break" />
+        {/* <--------------------------------- banner section --------------------------------------------->  */}
         <section
           id="section3"
           className="min-h-screen h-auto container mx-auto flex flex-col lg:flex-row justify-center items-center"
@@ -149,17 +156,9 @@ const HomePage = () => {
             </div>
           </div>
         </section>
+        <hr className="line_break" />
+        {/* <--------------------------------- services section --------------------------------------------->  */}
 
-        <section className="min-h-screen h-auto mx-auto flex flex-wrap justify-center items-center">
-          <h1 className="text-white   text-5xl md:text-6xl p-2 font-bold">
-            Quick snapshots of services offered
-          </h1>
-          <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 ${styles.service_wrapper}`}>
-            {services.map((item, index: number) => {
-              return <ServiceCard key={index} {...item} />;
-            })}
-          </div>
-        </section>
         <section className=" min-h-screen h-auto container mx-auto flex flex-col lg:flex-row justify-center items-center">
           <div className="flex flex-col lg:flex-row justify-center w-full">
             <div className="flex text-center flex-col w-full lg:w-1/2  text-white p-8 md:p-28 lg:text-left  tracking-wider">
@@ -178,11 +177,26 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        <section className="container min-h-screen h-auto mx-auto flex flex-wrap flex-col justify-center p-28 ">
-          <h1 className=" text-white text-6xl md:text-6xl  font-bold">
-            Our Testimonials
+        <hr className="line_break" />
+        <section className="min-h-screen h-auto mx-auto flex flex-wrap justify-center items-center">
+          <h1 className="text-white   text-5xl md:text-6xl p-2 font-bold">
+            Quick snapshots of services offered
           </h1>
-          <p className=" text-white text-xl md:text-2xl">
+          <div
+            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 ${styles.service_wrapper}`}
+          >
+            {services.map((item, index: number) => {
+              return <ServiceCard key={index} {...item} />;
+            })}
+          </div>
+        </section>
+        <hr className="line_break" />
+        {/* <--------------------------------- Testimonilas --------------------------------------------->  */}
+        <section className="w-full min-h-screen h-auto mx-auto flex flex-wrap flex-col justify-center">
+          <h1 className="px-80 my-5  text-white text-6xl md:text-6xl  font-bold">
+            Testimonials
+          </h1>
+          <p className="px-80 mb-5 text-purple-200 text-md md:text-xl">
             But don't just take our word for it. Hear from our clients who we've
             helped reach the marketing hall of fame!
           </p>
@@ -191,6 +205,8 @@ const HomePage = () => {
           </div>
         </section>
       </GalaxyParallax>
+
+      <div className="h-20 bg-violet-600"></div>
     </main>
   );
 };
