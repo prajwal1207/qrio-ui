@@ -106,6 +106,8 @@ const HomePage = () => {
         <section className="h-screen flex items-center justify-center"></section>
         <section className="h-screen flex items-center justify-center"></section>
       </GalaxyParallax>
+
+      <div className="h-20 bg-violet-600"></div>
     </main>
   );
 };
