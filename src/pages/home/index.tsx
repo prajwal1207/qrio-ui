@@ -6,7 +6,8 @@ import ServiceCard from "../../components/Cards/ServiceCard";
 import { GalaxyParallax } from "../../components/Gaxaxy";
 import TestimonialCarousel from "../../components/Testimonials";
 import styles from "./styles.module.scss";
-import { services } from "../../constants/constant";
+import { CLIENTS_LOGO, services } from "../../constants/constant";
+import Marquee from "../../components/Marque";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,6 +63,32 @@ const HomePage = () => {
       },
     });
 
+    gsap.from("#sec5", {
+      x: -300,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: "#section4",
+        // markers: true,
+        start: "top center",
+        end: "bottom center",
+        toggleActions: "play reverse play reverse",
+      },
+    });
+
+    gsap.from("#sec6", {
+      x: 300,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: "#section4",
+        // markers: true,
+        start: "top center",
+        end: "bottom center",
+        toggleActions: "play reverse play reverse",
+      },
+    });
+
     const tl = gsap.timeline();
     tl.from("#banner_text", {
       y: 50,
@@ -108,7 +135,9 @@ const HomePage = () => {
               id="sec1"
               className="flex text-center flex-col w-full lg:w-1/2  text-white p-8 md:p-28 lg:text-left  tracking-wider"
             >
-              <h1 className="text-5xl md:text-6xl p-2 font-bold ">About us</h1>
+              <h1 className="text-5xl md:text-6xl p-2 font-bold glow-text">
+                About us
+              </h1>
               <span className="text-2xl md:text-4xl">Curating Your Brand!</span>
               <p className="text-xl md:text-2xl py-5">
                 In a world full of 'meh,' Qrio stands out by not just thinking
@@ -143,7 +172,7 @@ const HomePage = () => {
               id="sec4"
               className="flex text-center flex-col w-full lg:w-1/2  text-white p-8 md:p-28 lg:text-left  tracking-wider"
             >
-              <h1 className="text-5xl md:text-6xl p-2 font-bold ">
+              <h1 className="text-5xl md:text-6xl p-2 font-bold glow-text ">
                 Vision and Mission
               </h1>
               <span className="text-2xl md:text-4xl">Curating Your Brand!</span>
@@ -159,10 +188,18 @@ const HomePage = () => {
         <hr className="line_break" />
         {/* <--------------------------------- services section --------------------------------------------->  */}
 
-        <section className=" min-h-screen h-auto container mx-auto flex flex-col lg:flex-row justify-center items-center">
+        <section
+          id="section4"
+          className=" min-h-screen h-auto container mx-auto flex flex-col lg:flex-row justify-center items-center"
+        >
           <div className="flex flex-col lg:flex-row justify-center w-full">
-            <div className="flex text-center flex-col w-full lg:w-1/2  text-white p-8 md:p-28 lg:text-left  tracking-wider">
-              <h1 className="text-5xl md:text-6xl p-2 font-bold ">Why Qrio?</h1>
+            <div
+              id="sec5"
+              className="flex text-center flex-col w-full lg:w-1/2  text-white p-8 md:p-28 lg:text-left  tracking-wider"
+            >
+              <h1 className="text-5xl md:text-6xl p-2 font-bold glow-text ">
+                Why qrio?
+              </h1>
               <span className="text-2xl md:text-4xl">Curating Your Brand!</span>
               <p className="text-xl md:text-2xl py-5">
                 Here’s the deal: We're not just marketers; we're the Gandalfs of
@@ -172,7 +209,10 @@ const HomePage = () => {
                 (we checked, it’s really not there).
               </p>
             </div>
-            <div className="flex justify-center items-center w-full lg:w-1/2 p-8 md:p-0">
+            <div
+              id="sec6"
+              className="flex justify-center items-center w-full lg:w-1/2 p-8 md:p-0"
+            >
               <img src={logo} className="h-64 md:h-[600px]" alt="logo" />
             </div>
           </div>
@@ -183,7 +223,8 @@ const HomePage = () => {
             Quick snapshots of services offered
           </h1>
           <div
-            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 ${styles.service_wrapper}`}
+            // className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 ${styles.service_wrapper}`}
+            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 `}
           >
             {services.map((item, index: number) => {
               return <ServiceCard key={index} {...item} />;
@@ -205,8 +246,16 @@ const HomePage = () => {
           </div>
         </section>
       </GalaxyParallax>
-
-      <div className="h-20 bg-violet-600"></div>
+      <hr className="line_break" />
+      <section className="min-h-screen h-auto mx-auto flex flex-wrap justify-center items-center">
+        <h1 className="text-white text-6xl md:text-6xl  font-bold">
+          Our Clients
+        </h1>
+        <Marquee items={CLIENTS_LOGO} gradient={2} />
+        <Marquee items={CLIENTS_LOGO} direction="right" gradient={3} />
+        <Marquee items={CLIENTS_LOGO} gradient={2} />
+      </section>
+      <div className="h-20 bg-violet-700"></div>
     </main>
   );
 };

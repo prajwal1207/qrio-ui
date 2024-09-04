@@ -28,7 +28,7 @@ const RandomBlinkingStars = () => {
 
   // Generate star positions with an even distribution
   const starPositions = useMemo(() => {
-    const positions = new Float32Array(7000 * 3);
+    const positions = new Float32Array(9000 * 3);
     const radius = 50; // Radius of the sphere
     for (let i = 0; i < 5000; i++) {
       // Randomly distribute stars in a spherical volume

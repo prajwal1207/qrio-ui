@@ -1,9 +1,24 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/images/cropped-logo.png";
 import styles from "./styles.module.scss";
+
+
+interface NavLinkProps {
+  path: string;
+  label: string;
+  toggleNavbar: () => void;
+}
+
+const NavLink: React.FC<NavLinkProps> = ({ path, label, toggleNavbar }) => (
+  <li className="nlink">
+    <Link to={path} onClick={toggleNavbar}>
+      {label}
+    </Link>
+  </li>
+);
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +31,7 @@ const Navbar = () => {
     const timeline = gsap.timeline();
     timeline.from(`#brand`, {
       y: -40,
-      opacity:0,
+      opacity: 0,
       duration: 1,
       delay: 0.5,
     });
@@ -28,6 +43,15 @@ const Navbar = () => {
       stagger: 0.2,
     });
   });
+
+  const links = [
+    { path: "/qrio-ui", label: "Home" },
+    { path: "/qrio-ui/about", label: "About" },
+    { path: "/qrio-ui/services", label: "Services" },
+    { path: "/qrio-ui/contact", label: "Contact" },
+    { path: "/qrio-ui/blog", label: "Blog" },
+    { path: "/qrio-ui/portfolio", label: "Portfolio" },
+  ];
 
   return (
     <header className={styles.navbar}>
@@ -54,41 +78,20 @@ const Navbar = () => {
             isOpen ? styles.navbar_links_open : ""
           }`}
         >
-          <li className="nlink">
-            <Link to="/qrio-ui" onClick={toggleNavbar}>
-              Home
-            </Link>
-          </li>
-          <li className="nlink">
-            <Link to="/qrio-ui/about" onClick={toggleNavbar}>
-              About
-            </Link>
-          </li>
-
-          <li className="nlink">
-            <Link to="/qrio-ui/services" onClick={toggleNavbar}>
-              Services
-            </Link>
-          </li>
-          <li className="nlink">
-            <Link to="/qrio-ui/contact" onClick={toggleNavbar}>
-              Contact
-            </Link>
-          </li>
-          <li className="nlink">
-            <Link to="/qrio-ui/blog" onClick={toggleNavbar}>
-              Blog
-            </Link>
-          </li>
-          <li className="nlink">
-            <Link to="/qrio-ui/portfolio" onClick={toggleNavbar}>
-              Portfolio
-            </Link>
-          </li>
+          {links.map((link, index) => (
+            <NavLink
+              key={index}
+              path={link.path}
+              label={link.label}
+              toggleNavbar={toggleNavbar}
+            />
+          ))}
         </ul>
       </nav>
     </header>
   );
 };
+
+
 
 export default Navbar;
