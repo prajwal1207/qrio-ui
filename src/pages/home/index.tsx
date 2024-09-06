@@ -252,8 +252,8 @@ const HomePage = () => {
           Our Clients
         </h1>
         <Marquee items={CLIENTS_LOGO} gradient={2} />
-        <Marquee items={CLIENTS_LOGO} direction="right" gradient={3} />
-        <Marquee items={CLIENTS_LOGO} gradient={2} />
+        {/* <Marquee items={CLIENTS_LOGO} direction="right" gradient={3} /> */}
+        <Marquee items={CLIENTS_LOGO} gradient={2} direction="right" />
       </section>
       <div className="h-20 bg-violet-700"></div>
     </main>
