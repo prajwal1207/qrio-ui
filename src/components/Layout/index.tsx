@@ -3,11 +3,12 @@ import { useEffect, useRef, useState } from "react";
 import { CgScrollV } from "react-icons/cg";
 import { FaPause } from "react-icons/fa";
 import { IoIosPlay } from "react-icons/io";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import song from "../../assets/music/apocalypse.mp3";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import styles from "./styles.module.scss";
+import { BsWhatsapp } from "react-icons/bs";
 
 const Layout = () => {
   const [isPlaying, setIsPlaying] = useState(true);
@@ -80,6 +81,11 @@ const Layout = () => {
       <main className={styles.content}>
         <Outlet />
         <div>
+          <Link to="https://wa.me/9685358775?text=I'm%20interested%20in%20your%20car%20for%20sale">
+            <button className="bg-purple-500 p-3 rounded-full text-white font-bold fixed bottom-4 last-16 z-50">
+              <BsWhatsapp />
+            </button>
+          </Link>
           <button
             onClick={togglePlayPause}
             className="bg-transparent border-2 border-solid border-purple-500 p-3 rounded-full text-white font-bold fixed bottom-4 right-4 z-50"
