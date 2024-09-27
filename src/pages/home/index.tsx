@@ -8,6 +8,8 @@ import TestimonialCarousel from "../../components/Testimonials";
 import styles from "./styles.module.scss";
 import { CLIENTS_LOGO, services } from "../../constants/constant";
 import Marquee from "../../components/Marque";
+import robot from '../../assets/images/elements/robot.svg'
+import planet from '../../assets/images/elements/planet.svg'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -166,7 +168,7 @@ const HomePage = () => {
               id="sec3"
               className="flex justify-center items-center w-full lg:w-1/2 p-8 md:p-0"
             >
-              <img src={logo} className="h-64 md:h-[600px]" alt="logo" />
+              <img src={robot} className="h-64 md:h-[600px]" alt="logo" />
             </div>
             <div
               id="sec4"
@@ -213,7 +215,7 @@ const HomePage = () => {
               id="sec6"
               className="flex justify-center items-center w-full lg:w-1/2 p-8 md:p-0"
             >
-              <img src={logo} className="h-64 md:h-[600px]" alt="logo" />
+              <img src={planet} className="h-64 md:h-[600px]" alt="logo" />
             </div>
           </div>
         </section>

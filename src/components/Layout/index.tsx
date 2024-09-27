@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
+import { BsWhatsapp } from "react-icons/bs";
 import { CgScrollV } from "react-icons/cg";
 import { FaPause } from "react-icons/fa";
 import { IoIosPlay } from "react-icons/io";
@@ -8,7 +9,6 @@ import song from "../../assets/music/apocalypse.mp3";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import styles from "./styles.module.scss";
-import { BsWhatsapp } from "react-icons/bs";
 
 const Layout = () => {
   const [isPlaying, setIsPlaying] = useState(true);

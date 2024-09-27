@@ -1,6 +1,6 @@
-import FoundersCard from "../../components/Founders";
+// import FoundersCard from "../../components/Founders";
 import { GalaxyParallax } from "../../components/Gaxaxy";
-import { FOUNDER_DETAILS } from "../../constants/constant";
+// import { FOUNDER_DETAILS } from "../../constants/constant";
 
 const AboutPage = () => {
   return (

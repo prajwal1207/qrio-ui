@@ -4,11 +4,17 @@ import { FaWhatsapp } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { IoArrowRedo } from "react-icons/io5";
 import { MdOutlineMail } from "react-icons/md";
-import { SlSocialInstagram,  SlSocialYoutube } from "react-icons/sl";
+import { SlSocialInstagram, SlSocialYoutube } from "react-icons/sl";
 import { TiSocialFacebook, TiSocialLinkedin } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/images/QRIO.png";
 import { SOCIAL_LINKS } from "../../../constants/constant";
+import linkdin_icon from "../../../assets/icons/linkdin.svg";
+import insta_icon from "../../../assets/icons/instagram_icon.svg";
+import facebook_icon from "../../../assets/icons/facebook_icon.svg";
+import thread_icon from "../../../assets/icons/thred_icon.svg";
+import youtube_icon from "../../../assets/icons/youtube_icon.svg";
+import whatsapp_icon from "../../../assets/icons/whatsapp_icon.svg";
 
 const Footer = () => {
   return (
@@ -112,23 +118,47 @@ const Footer = () => {
               </form>
             </div>
             <div className="flex justify-center ">
-              {/* <Link target="_blank" to={SOCIAL_LINKS.THREAD}>
-                <SlSocialTwitter className="text-white text-4xl m-3" />
-              </Link> */}
               <Link target="_blank" to={SOCIAL_LINKS.LINKEDIN}>
-                <TiSocialLinkedin className="text-white text-4xl m-3" />
+                <img
+                  src={linkdin_icon}
+                  alt="linkedin"
+                  className="text-white text-4xl m-3"
+                />
               </Link>
               <Link target="_blank" to={SOCIAL_LINKS.INSTAGRAM}>
-                <SlSocialInstagram className="text-white text-4xl m-3" />
+                <img
+                  src={insta_icon}
+                  alt="linkedin"
+                  className="text-white text-4xl m-3"
+                />
               </Link>
               <Link target="_blank" to={SOCIAL_LINKS.FACEBOOK}>
-                <TiSocialFacebook className="text-white text-4xl m-3" />
+                <img
+                  src={facebook_icon}
+                  alt="linkedin"
+                  className="text-white text-4xl m-3"
+                />
               </Link>
               <Link target="_blank" to={SOCIAL_LINKS.YOUTUBE}>
-                <SlSocialYoutube className="text-white text-4xl m-3" />
+                <img
+                  src={youtube_icon}
+                  alt="linkedin"
+                  className="text-white text-4xl m-3"
+                />
               </Link>
               <Link target="_blank" to={SOCIAL_LINKS.CONTACT}>
-                <FaWhatsapp className="text-white text-4xl m-3" />
+                <img
+                  src={whatsapp_icon}
+                  alt="linkedin"
+                  className="text-white text-4xl m-3"
+                />
+              </Link>
+              <Link target="_blank" to={SOCIAL_LINKS.CONTACT}>
+                <img
+                  src={thread_icon}
+                  alt="linkedin"
+                  className="text-white text-4xl m-3"
+                />
               </Link>
             </div>
           </div>

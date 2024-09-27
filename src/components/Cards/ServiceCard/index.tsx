@@ -11,7 +11,8 @@ const ServiceCard = (props: any) => {
     if (!cardRef.current || !iconRef.current) return;
     const handleMouseEnter = () => {
       gsap.to(iconRef.current, {
-        rotateY: 180,
+        // rotateY: 180,
+        scale:'1.3',
         duration: 1,
         ease: "linear",
         transformOrigin: "center",
@@ -20,7 +21,7 @@ const ServiceCard = (props: any) => {
 
     const handleMouseLeave = () => {
       gsap.killTweensOf(iconRef.current); // Stop the animation on mouse leave
-      gsap.set(iconRef.current, { rotateY: 0 }); // Reset the rotation
+      gsap.set(iconRef.current, { scale: 1 }); // Reset the rotation
     };
 
     const cardElement = cardRef.current;
@@ -38,7 +39,7 @@ const ServiceCard = (props: any) => {
       <span className="flex justify-center p-5">
         <img
           src={props.icon}
-          className={`h-20 ${styles.icons}`}
+          className={`h-24 ${styles.icons}`}
           alt="icon"
           ref={iconRef}
         />
