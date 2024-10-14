@@ -1,11 +1,14 @@
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/navigation";
 import "swiper/css/pagination"; // Import pagination CSS
+import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  TESTIMONIAL,
+  TestimonyType
+} from "../../constants/constant";
 import TestimonialCard from "./TestimonialCard";
-import { testimonial, TestimonyType } from "../../constants/constant";
-import { Autoplay, Pagination, EffectCoverflow } from "swiper/modules";
 
 const TestimonialCarousel = () => {
   return (
@@ -42,7 +45,7 @@ const TestimonialCarousel = () => {
         },
       }}
     >
-      {testimonial.map((testimony: TestimonyType, index: number) => (
+      {TESTIMONIAL.map((testimony: TestimonyType, index: number) => (
         <SwiperSlide
           className="flex justify-center items-center p-10"
           key={index}

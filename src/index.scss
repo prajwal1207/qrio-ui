@@ -13,7 +13,7 @@ body {
   font-weight: $inter-regular;
   overflow-x: hidden;
   // height: 100vh;
-  background-color: $color-dark;
+  background-color: $color-dark; 
 }
 
 h1,
@@ -72,12 +72,12 @@ hr {
 
 @keyframes neon6 {
   from {
-    text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de,
-      0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 60px #ff00de, 0 0 70px #ff00de;
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00de,
+      0 0 20px #ff00de, 0 0 25px #ff00de, 0 0 30px #ff00de, 0 0 35px #ff00de;
   }
   to {
-    text-shadow: 0 0 2px #fff, 0 0 6px #fff, 0 0 10px #fff, 0 0 15px #ff00de,
-      0 0 20px #ff00de, 0 0 25px #ff00de, 0 0 30px #ff00de, 0 0 40px #ff00de;
+    text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 6px #fff, 0 0 10px #ff00de,
+      0 0 15px #ff00de, 0 0 20px #ff00de, 0 0 25px #ff00de, 0 0 30px #ff00de;
   }
 }
 

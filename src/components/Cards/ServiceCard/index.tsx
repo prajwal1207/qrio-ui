@@ -12,7 +12,7 @@ const ServiceCard = (props: any) => {
     const handleMouseEnter = () => {
       gsap.to(iconRef.current, {
         // rotateY: 180,
-        scale:'1.3',
+        scale:'1.2',
         duration: 1,
         ease: "linear",
         transformOrigin: "center",
@@ -44,7 +44,7 @@ const ServiceCard = (props: any) => {
           ref={iconRef}
         />
       </span>
-      <h2 className="m-2 text-lg font-bold text-fuchsia-500">{props.title}</h2>
+      <h2 className="m-2 text-xl font-bold text-fuchsia-500">{props.title}</h2>
       <p className="text-gray-200">{props.desc}</p>
     </div>
   );

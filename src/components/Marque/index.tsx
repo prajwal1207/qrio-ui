@@ -1,8 +1,8 @@
-import React, { useRef } from "react";
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import styles from "./styles.module.scss";
+import gsap from "gsap";
+import React, { useRef } from "react";
 import MarqueCard from "./MarqueCard";
+import styles from "./styles.module.scss";
 
 interface MarqueeProps {
   items: { logo: string; name: string }[];
@@ -28,11 +28,11 @@ const Marquee: React.FC<MarqueeProps> = ({
       marqueeElement.innerHTML += clonedContent;
 
       gsap.set(marqueeElement, {
-        xPercent: direction === "right" ? -50 : 0, // Start at the end for the "right" direction
+        xPercent: direction === "right" ? -50 : 0,
       });
 
       gsap.to(marqueeElement, {
-        xPercent: direction === "left" ? -50 : 0, // Move from right to left for "right" direction
+        xPercent: direction === "left" ? -50 : 0,
         ease: "none",
         duration: speed,
         repeat: -1,

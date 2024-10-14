@@ -89,12 +89,34 @@
 //   }
 // }
 
+// .heading {
+//   position: relative;
+//   color: $color-dark;
+//   font-size: 5.5rem;
+//   font-weight: bold;
+//   -webkit-text-stroke: 0.1vw #f000f0;
+//   overflow: hidden;
+//   white-space: nowrap;
+// }
+
+// .heading::before {
+//   content: attr(data-text);
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   color: #a005a0;
+//   width: 0;
+//   overflow: hidden;
+//   -webkit-text-stroke: 0vw $color-dark;
+//   animation: smooth-fill 6s ease forwards infinite;
+// }
+
 .heading {
   position: relative;
   color: $color-dark;
   font-size: 5.5rem;
   font-weight: bold;
-  -webkit-text-stroke: 0.1vw #f000f0;
+  -webkit-text-stroke: 0.1vw #8b488b;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -104,12 +126,16 @@
   position: absolute;
   top: 0;
   left: 0;
-  color: #e700e7;
+  background: radial-gradient(circle, #8800FF, #DB00FE);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   width: 0;
   overflow: hidden;
   -webkit-text-stroke: 0vw $color-dark;
   animation: smooth-fill 6s ease forwards infinite;
 }
+
 
 @keyframes smooth-fill {
   0% {
@@ -118,4 +144,59 @@
   100% {
     width: 100%;
   }
+}
+
+.marqueWrapper {
+  // mask-image: linear-gradient(to right ,#020c14 );
+  // mask-image: linear-gradient(
+  //   to right,
+  //   transparent,
+  //   hsl(0 0% 0% / 1)30%,
+  //   hsl(0 0% 0% / 1) 50%,
+  //   hsl(0 0% 0% / 1) 90%,
+  //   hsl(0 0% 0% / 1)50%
+  // );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    hsl(0 0% 0% / 1) 30%,
+    hsl(0 0% 0% / 1) 70%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    hsl(0 0% 0% / 1) 30%,
+    hsl(0 0% 0% / 1) 70%,
+    transparent 100%
+  ); /* For WebKit browsers */
+}
+
+// .baground {
+//   background-image: url(../../assets//images/bg.jpeg);
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
+
+
+.baground {
+  position: relative;
+  z-index: 1;
+}
+
+.baground::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../assets/images/bg.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px) ;
+  z-index: -1; 
 }

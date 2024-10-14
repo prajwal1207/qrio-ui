@@ -67,7 +67,7 @@ export interface TestimonyType {
 //   },
 // ];
 
-export const testimonial: TestimonyType[] = [
+export const TESTIMONIAL: TestimonyType[] = [
   {
     id: 1,
     bgColor: "#F54748",
@@ -128,7 +128,7 @@ import lightning from "../assets/icons/lightning.svg";
 import social from "../assets/icons/social.svg";
 import youtube from "../assets/icons/youtube.svg";
 
-export const services = [
+export const SERVICES = [
   {
     id: 1,
     title: "Digital Marketing",

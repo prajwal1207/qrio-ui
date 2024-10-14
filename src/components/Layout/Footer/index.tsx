@@ -1,20 +1,17 @@
 import { BsTelephone } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
-import { FaWhatsapp } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { IoArrowRedo } from "react-icons/io5";
 import { MdOutlineMail } from "react-icons/md";
-import { SlSocialInstagram, SlSocialYoutube } from "react-icons/sl";
-import { TiSocialFacebook, TiSocialLinkedin } from "react-icons/ti";
 import { Link } from "react-router-dom";
+import facebook_icon from "../../../assets/icons/facebook_icon.svg";
+import insta_icon from "../../../assets/icons/instagram_icon.svg";
+import linkdin_icon from "../../../assets/icons/linkdin.svg";
+import thread_icon from "../../../assets/icons/thred_icon.svg";
+import whatsapp_icon from "../../../assets/icons/whatsapp_icon.svg";
+import youtube_icon from "../../../assets/icons/youtube_icon.svg";
 import logo from "../../../assets/images/QRIO.png";
 import { SOCIAL_LINKS } from "../../../constants/constant";
-import linkdin_icon from "../../../assets/icons/linkdin.svg";
-import insta_icon from "../../../assets/icons/instagram_icon.svg";
-import facebook_icon from "../../../assets/icons/facebook_icon.svg";
-import thread_icon from "../../../assets/icons/thred_icon.svg";
-import youtube_icon from "../../../assets/icons/youtube_icon.svg";
-import whatsapp_icon from "../../../assets/icons/whatsapp_icon.svg";
 
 const Footer = () => {
   return (

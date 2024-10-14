@@ -1,10 +1,10 @@
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
-import { BsWhatsapp } from "react-icons/bs";
 import { CgScrollV } from "react-icons/cg";
 import { FaPause } from "react-icons/fa";
 import { IoIosPlay } from "react-icons/io";
 import { Link, Outlet } from "react-router-dom";
+import whatapp_icon from "../../assets/icons/whatsapp_icon.svg";
 import song from "../../assets/music/apocalypse.mp3";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
@@ -82,8 +82,8 @@ const Layout = () => {
         <Outlet />
         <div>
           <Link to="https://wa.me/9685358775?text=I'm%20interested%20in%20your%20car%20for%20sale">
-            <button className="bg-purple-500 p-3 rounded-full text-white font-bold fixed bottom-4 last-16 z-50">
-              <BsWhatsapp />
+            <button className="bg-purple-500 p-2 rounded-full text-white font-bold fixed bottom-4 last-16 z-50">
+              <img src={whatapp_icon} className="h-8" alt="" />
             </button>
           </Link>
           <button
