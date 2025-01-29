@@ -81,7 +81,7 @@ const Layout = () => {
       <main className={styles.content}>
         <Outlet />
         <div>
-          <Link to="https://wa.me/9993531777?text=I'm%20interested%20in%20your%20car%20for%20sale">
+          <Link to="https://wa.me/9685358775?text=I'm%20interested%20in%20your%20car%20for%20sale">
             <button className="bg-purple-500 p-2 rounded-full text-white font-bold fixed bottom-4 last-16 z-50">
               <img src={whatapp_icon} className="h-8" alt="" />
             </button>

@@ -60,7 +60,7 @@ const HomePage = () => {
         <WhyUsSection />
         <hr className="line_break" />
         <section className="min-h-screen h-auto mx-auto flex flex-wrap justify-center items-center">
-          <h1 className="text-white py-6 text-2xl md:text-5xl p-2 font-bold glow-text">
+          <h1 className="text-white py-6 text-5xl md:text-6xl p-2 font-bold glow-text">
             Quick snapshots of services offered
           </h1>
           <div
@@ -73,7 +73,7 @@ const HomePage = () => {
         </section>
         <hr className="line_break" />
         <section className="w-full min-h-screen h-auto mx-auto flex flex-wrap flex-col justify-center">
-          <h1 className="px-80 text-white py-6 text-5xl md:text-5xl p-2 font-bold glow-text text-center">
+          <h1 className="px-80 text-white py-6 text-5xl md:text-6xl p-2 font-bold glow-text">
             Testimonials
           </h1>
           <p className="px-80 mb-5 text-gray-400 text-md md:text-xl">
@@ -84,30 +84,27 @@ const HomePage = () => {
             <TestimonialCarousel />
           </div>
         </section>
-        <section className="h-screen container mx-auto flex flex-col lg:flex-row justify-center items-center">
-          <div className="flex flex-col lg:flex-row justify-center w-full">
-            <div className="flex text-center flex-col w-full lg:w-1/2  text-white p-8 md:p-28 lg:text-left  tracking-wider">
-              <h1 className="text-4xl md:text-6xl p-2 font-bold ">
-                Welcome to Qrio
-              </h1>
-              <span className="text-2xl md:text-4xl">Curating Your Brand!</span>
-              <p className="text-lg md:text-2xl py-5">
-                Experience the creative pulse of Qrio Marketing Agency. Dive
-                into our diverse range of services from digital marketing to
-                photography and see how we can elevate your brand's presence.
-                Explore our site to discover our innovative approach!
-              </p>
-            </div>
-            <div className="flex justify-center items-center w-full lg:w-1/2 p-8 md:p-0">
-              <img src={logo} className="h-64 md:h-[600px]" alt="logo" />
-            </div>
+        <hr className="line_break" />
+        <section className="container min-h-screen h-auto mx-auto flex flex-wrap justify-center items-center">
+          <div className="flex flex-col items-center">
+            <h1 className="text-white text-6xl md:text-6xl font-bold glow-text">
+              Our Clients
+            </h1>
+            <p className="w-2/3  tracking-wider leading-6 font-bold py-3 text-xl md:text-xl text-gray-400">
+              Driven by Integrity, Powered by Creativity, and Sustained by
+              Coffee – we're the team you call when you want to do more than
+              just market. You want to make a scene.
+            </p>
+          </div>
+          <div className={`w-5/6 ${styles.marqueWrapper}`}>
+            <Marquee items={CLIENTS_LOGO} direction="right" gradient={3} />
+            <Marquee items={CLIENTS_LOGO} gradient={2} />
+            <Marquee items={CLIENTS_LOGO} direction="right" gradient={3} />
+            <Marquee items={CLIENTS_LOGO} gradient={2} direction="right" />
           </div>
         </section>
-        <section className="h-screen flex items-center justify-center"></section>
-        <section className="h-screen flex items-center justify-center"></section>
+        <hr className="line_break" />
       </GalaxyParallax>
-
-      <div className="h-20 bg-violet-600"></div>
     </main>
   );
 };

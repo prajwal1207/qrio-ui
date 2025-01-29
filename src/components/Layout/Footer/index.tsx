@@ -1,6 +1,5 @@
 import { BsTelephone } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
-import { FaWhatsapp } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { IoArrowRedo } from "react-icons/io5";
 import { MdOutlineMail } from "react-icons/md";
@@ -52,11 +51,11 @@ const Footer = () => {
             </span>
             <span className="flex text-md my-2">
               <MdOutlineMail className="text-xl font-bold mx-2" />
-              <p>hello.qrio@gmail.com</p>
+              <p>qrioexample@youpmail.com</p>
             </span>
             <span className="flex text-md my-2">
               <BsTelephone className="text-xl font-bold mx-2" />
-              <p>+91 9993531777</p>
+              <p>8269024132</p>
             </span>
           </div>
           <div className="flex items-center flex-col">
@@ -119,42 +118,42 @@ const Footer = () => {
               <Link target="_blank" to={SOCIAL_LINKS.LINKEDIN}>
                 <img
                   src={linkdin_icon}
-                  alt="linkedin_icon"
+                  alt="linkedin"
                   className="text-white text-4xl m-3"
                 />
               </Link>
               <Link target="_blank" to={SOCIAL_LINKS.INSTAGRAM}>
                 <img
                   src={insta_icon}
-                  alt="instagram_icon"
+                  alt="linkedin"
                   className="text-white text-4xl m-3"
                 />
               </Link>
               <Link target="_blank" to={SOCIAL_LINKS.FACEBOOK}>
                 <img
                   src={facebook_icon}
-                  alt="facebook_icon"
+                  alt="linkedin"
                   className="text-white text-4xl m-3"
                 />
               </Link>
               <Link target="_blank" to={SOCIAL_LINKS.YOUTUBE}>
                 <img
                   src={youtube_icon}
-                  alt="youtube_icon"
+                  alt="linkedin"
                   className="text-white text-4xl m-3"
                 />
               </Link>
               <Link target="_blank" to={SOCIAL_LINKS.CONTACT}>
                 <img
                   src={whatsapp_icon}
-                  alt="whatsapp_icon"
+                  alt="linkedin"
                   className="text-white text-4xl m-3"
                 />
               </Link>
-              <Link target="_blank" to={SOCIAL_LINKS.THREAD}>
+              <Link target="_blank" to={SOCIAL_LINKS.CONTACT}>
                 <img
                   src={thread_icon}
-                  alt="thread_icon"
+                  alt="linkedin"
                   className="text-white text-4xl m-3"
                 />
               </Link>

@@ -12,10 +12,10 @@ const AboutSection: React.FC = () => {
           id="sec1"
           className="flex text-center flex-col w-full lg:w-1/2 text-white p-8 md:p-28 lg:text-left tracking-wider"
         >
-          <h1 className="text-4xl md:text-5xl p-2 font-bold glow-text">
+          <h1 className="text-5xl md:text-6xl p-2 font-bold glow-text">
             About us
           </h1>
-          <span className="text-2xl md:text-3xl font-bold text-gray-100 flex text-center align-middle">
+          <span className="text-2xl md:text-4xl font-bold text-gray-100 flex text-center align-middle">
             CURATING YOUR BRAND !
           </span>
           <p className="tracking-wider leading-6 font-bold py-3 text-xl md:text-xl text-gray-400">

@@ -120,7 +120,6 @@ export const TESTIMONIAL: TestimonyType[] = [
   },
 ];
 
-
 // services
 import computer from "../assets/icons/computer.svg";
 import camera from "../assets/icons/camera.svg";
@@ -173,9 +172,9 @@ export const SOCIAL_LINKS = {
   FACEBOOK: "https://www.facebook.com/share/1DxwTAG7qQ9o2Pkc/?mibextid=LQQJ4d",
   LINKEDIN: "https://www.linkedin.com/company/qrio-in/",
   YOUTUBE: "https://www.youtube.com/@qrio.marketing",
-  THREAD: "https://www.threads.net/@qrio.in",
+  THREAD: "",
   EMAIL: "hello.qrio@gmail.com",
-  CONTACT: "https://wa.me/9993531777?text=I'm%20interested%20in%20your%20car%20for%20sale",
+  CONTACT: "+91 9993531777",
 };
 
 import img_neelanshi from "../assets/images/img-neelanshi.jpg";
@@ -209,67 +208,6 @@ Qrio’s campaigns aren't just seen; they're remembered.`,
 perfection. Whether it's a photoshoot or a commercial, he makes sure every pixel pops and
 every shot tells a story. Under his watch, production isn’t just a process; it’s a performance.`,
     image: img_samyak,
-  },
-  {
-    name: "Ayush Maheshwari",
-    title: "The Business Brain",
-    desc: `Ayush doesn’t just think outside the box; he redesigns it for better efficiency. With a mind
-sharp enough to slice through the toughest business challenges, he’s the go-to guy for growth
-hacks and power moves. Ayush's strategies are the secret sauce behind Qrio’s success,
-blending innovation with actionable insights that propel our clients to new heights`,
-    image: img_aayush,
-  },
-];
-
-import sharaton_logo from "../assets/images/clients/Sheraton Tungsten Logo.png";
-import mpi_logo from "../assets/images/clients/MPI.png";
-import weatherwise_logo from "../assets/images/clients/Weather.png";
-import water_logo from "../assets/images/clients/Watergram.png";
-import hub_logo from "../assets/images/clients/Untitled design.png";
-import nine_angles from "../assets/images/clients/Nine_angels.jpg";
-
-export const CLIENTS_LOGO = [
-  { name: "MPI", logo: mpi_logo },
-  { name: "Sheraton grand palace", logo: sharaton_logo },
-  { name: "Weatherwise", logo: weatherwise_logo },
-  { name: "Watergram", logo: water_logo },
-  { name: "Hublika", logo: hub_logo },
-  { name: "Nine Angels", logo: nine_angles },
-];
-
-export const SOCIAL_LINKS = {
-  INSTAGRAM: "https://www.instagram.com/qrio.in?igsh=aHJ1enBlbHhwZTc3",
-  FACEBOOK: "https://www.facebook.com/share/1DxwTAG7qQ9o2Pkc/?mibextid=LQQJ4d",
-  LINKEDIN: "https://www.linkedin.com/company/qrio-in/",
-  YOUTUBE: "https://www.youtube.com/@qrio.marketing",
-  THREAD: "https://www.threads.net/@qrio.in",
-  EMAIL: "hello.qrio@gmail.com",
-  CONTACT: "https://wa.me/9993531777?text=I'm%20interested%20in%20your%20car%20for%20sale",
-};
-
-import img_neelanshi from "../assets/images/img-neelanshi.jpg";
-import img_yashi from "../assets/images/img-yashi.jpg";
-import img_samyak from "../assets/images/img-samyak.jpg";
-import img_aayush from "../assets/images/img-aayush.jpg";
-
-export const FOUNDER_DETAILS = [
-  {
-    name: "Yashasvi Sharma",
-    title: "The Creative Whiz",
-    desc: `If creativity had a duel, Yashasvi would be the reigning champion. Armed with her arsenal of
-design tools and an eye for the sublime, she transforms bland into brand. Her projects don’t just
-meet expectations; they dance on them and then do a backflip. Yashasvi is the heart and soul of
-Qrio’s creative pulse, ensuring everything we produce is both eye-candy and brain food.`,
-    image: img_yashi,
-  },
-  {
-    name: "Neelanshi Khare",
-    title: "The Marketing Maestro",
-    desc: `When she's not busy breaking the internet with viral campaigns, Neelanshi can be found
-sipping chai and plotting world domination—one brand at a time. Her marketing strategies aren’t
-just effective; they’re revolutionary. With a blend of intuition and analytics, Neelanshi ensures
-Qrio’s campaigns aren't just seen; they're remembered.`,
-    image: img_neelanshi,
   },
   {
     name: "Samyak Gandhi",

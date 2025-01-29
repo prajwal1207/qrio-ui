@@ -19,7 +19,7 @@ const VisionSection: React.FC = () => {
           id="sec4"
           className="flex text-center flex-col w-full lg:w-1/2 text-white p-8 md:p-28 lg:text-left tracking-wider"
         >
-          <h1 className="text-5xl md:text-5xl font-bold glow-text ">
+          <h1 className="text-5xl md:text-6xl font-bold glow-text ">
             Vision and Mission
           </h1>
           <span className="py-2 text-2xl md:text-4xl font-bold text-gray-100 flex text-center align-middle">Curating Your Brand!</span>
