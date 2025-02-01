@@ -1,5 +1,5 @@
 const ServicesPage = () => {
-  return <section>ServicesPage</section>;
+  return <main>ServicesPage</main>;
 };
 
 export default ServicesPage;

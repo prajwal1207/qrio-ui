@@ -6,7 +6,7 @@ interface Button extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button: React.FC<Button> = ({ text }) => {
-  return <button className={`font-bold ${styles.btn_donate}`}>{text}</button>;
+  return <button className={`font-bold bg-custom-gradient ${styles.btn_donate}`}>{text}</button>;
 };
 
 export default Button;

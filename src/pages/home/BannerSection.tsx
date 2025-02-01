@@ -2,7 +2,6 @@
 import React from "react";
 import styles from "./styles.module.scss";
 import Button from "../../components/Buttons/Button";
-import { useGSAP } from "@gsap/react";
 
 const BannerSection: React.FC = () => {
   // useGSAP(() => {

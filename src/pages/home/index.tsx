@@ -1,16 +1,22 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import ServiceCard from "../../components/Cards/ServiceCard";
-import { GalaxyParallax } from "../../components/Gaxaxy";
-import Marquee from "../../components/Marque";
-import TestimonialCarousel from "../../components/Testimonials";
-import { CLIENTS_LOGO, SERVICES } from "../../constants/constant";
-import AboutSection from "./AboutSection";
-import BannerSection from "./BannerSection";
-import styles from "./styles.module.scss";
-import VisionSection from "./VisionSection";
-import WhyUsSection from "./WhyUsSection";
+import img from "../../assets/images/web 02 1.png";
+import Button from "../../components/Buttons/Button";
+import Img from "../../components/Img";
+import Paragraph from "../../components/Paragraph";
+import Heading from "../../components/Heading";
+import Marquee from "../../components/Marque/Marque";
+// import ServiceCard from "../../components/Cards/ServiceCard";
+// import { GalaxyParallax } from "../../components/Gaxaxy";
+// import Marquee from "../../components/Marque";
+// import TestimonialCarousel from "../../components/Testimonials";
+// import { CLIENTS_LOGO, SERVICES } from "../../constants/constant";
+// import AboutSection from "./AboutSection";
+// import BannerSection from "./BannerSection";
+// import styles from "./styles.module.scss";
+// import VisionSection from "./VisionSection";
+// import WhyUsSection from "./WhyUsSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,8 +55,74 @@ const HomePage = () => {
   useGSAP(animateSections);
 
   return (
-    <main>
-      <BannerSection />
+    <main style={{ height: "500vh" }} className="py-10">
+      <section className="relative flex flex-col md:flex-row justify-center md:justify-end items-center">
+        <div className="absolute right-0 w-full md:w-3/4 h-full bg-gradient-to-r from-transparent via-purple-700 to-purple-500 opacity-35 blur-[100px]"></div>
+
+        <div className="w-full md:w-2/3 flex justify-center px-4 md:px-0">
+          <div className="flex justify-center items-start flex-col text-center md:text-left">
+            <Heading
+              size="heading7xl"
+              className="text-transparent bg-clip-text bg-custom-gradient font-bold text-3xl md:text-7xl"
+            >
+              Welcome to qrio
+            </Heading>
+            <Heading
+              size="heading3xl"
+              className="text-center md:text-left text-gray-100 text-2xl md:text-4xl"
+            >
+              CURATING YOUR BRAND
+            </Heading>
+            <Paragraph
+              id="banner_desc"
+              className="tracking-wider leading-6 font-bold py-3 text-xl md:text-xl text-gray-400"
+            >
+              Discover Qrio, where creativity meets quirkiness, <br />
+              and marketing strategies come with a side of pizzazz. <br />
+              Dive into a world where your brand not only grows but <br />{" "}
+              thrives with flair!
+            </Paragraph>
+            <span id="banner_desc" className="my-3">
+              <Button text="get started" />
+            </span>
+          </div>
+        </div>
+
+        <div className="relative w-full md:w-1/3 flex justify-end mt-8 md:mt-0">
+          <Img
+            src={img}
+            className="h-[400px] md:h-[800px] relative z-10"
+            alt="img"
+          />
+        </div>
+      </section>
+      <section className="h-[100vh]"></section>
+      <section className="h-auto ">
+        <div
+          style={{
+            transform: "rotate(-6deg)",
+            transformOrigin: "center",
+          }}
+        >
+          <Marquee />
+        </div>
+        <div
+          style={{
+            transform: "rotate(6deg)",
+            transformOrigin: "center",
+          }}
+        >
+          <Marquee />
+        </div>
+      </section>
+    </main>
+  );
+};
+
+export default HomePage;
+
+{
+  /* <BannerSection />
       <hr className="line_break" />
       <GalaxyParallax>
         <AboutSection />
@@ -104,9 +176,5 @@ const HomePage = () => {
           </div>
         </section>
         <hr className="line_break" />
-      </GalaxyParallax>
-    </main>
-  );
-};
-
-export default HomePage;
+      </GalaxyParallax> */
+}
