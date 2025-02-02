@@ -41,11 +41,10 @@ const Navbar: React.FC<any> = ({ link, seLink }) => {
                 className={`${link.path === path ? styles.active : ""}`}
                 onClick={() => seLink({ path, label })}
               >
-                {/* <Link to={path}>{label}</Link> */}
                 <NavLink
                   to={path}
                   className={({ isActive }) =>
-                    isActive ? styles.active : "" // Apply 'active' class based on isActive prop
+                    isActive ? styles.active : "" 
                   }
                   onClick={() => seLink({ path, label })}
                 >

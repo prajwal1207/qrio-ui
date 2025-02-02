@@ -4,25 +4,22 @@ import "swiper/css/navigation";
 import "swiper/css/pagination"; // Import pagination CSS
 import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  TESTIMONIAL,
-  TestimonyType
-} from "../../constants/constant";
+import { TESTIMONIAL, TestimonyType } from "../../constants/constant";
 import TestimonialCard from "./TestimonialCard";
 
 const TestimonialCarousel = () => {
   return (
     <Swiper
-      effect="coverflow"
+      // effect="coverflow"
       slidesPerView={3}
-      autoplay={{ delay: 3000, disableOnInteraction: false }} // Slows down the autoplay for better effect
+      autoplay={{ delay: 3000, disableOnInteraction: false }}
       coverflowEffect={{
-        rotate: 50, // Rotate the slides
-        stretch: 0, // Stretch space between slides
-        depth: 100, // Adds perspective depth
-        modifier: 1, // Modifier for the effect
-        slideShadows: false, // Disable shadows for cleaner look
-        scale: 0.9, // Set scale of slides (default is 0.8)
+        rotate: 0, // No rotation for a clean effect
+        stretch: 0,
+        depth: 150, // Increase depth for better 3D effect
+        modifier: 2.5, // Stronger scale effect
+        slideShadows: false,
+        scale: 0.8, // Default scale
       }}
       grabCursor
       loop
@@ -31,30 +28,21 @@ const TestimonialCarousel = () => {
       modules={[Pagination, Autoplay, EffectCoverflow]}
       className="swiper_container"
       breakpoints={{
-        // when window width is >= 1024px
-        1024: {
-          slidesPerView: 3,
-        },
-        // when window width is >= 768px
-        768: {
-          slidesPerView: 2,
-        },
-        // when window width is < 768px
-        0: {
-          slidesPerView: 1,
-        },
+        1024: { slidesPerView: 3 },
+        768: { slidesPerView: 2 },
+        0: { slidesPerView: 1 },
       }}
     >
       {TESTIMONIAL.map((testimony: TestimonyType, index: number) => (
         <SwiperSlide
-          className="flex justify-center items-center p-10"
           key={index}
+          className="swiper-slide-custom flex justify-center items-center p-10"
         >
           <TestimonialCard
-            description={testimony.description}
-            name={testimony.name}
-            position={testimony.postion}
-            logo={testimony.logo}
+            companyName={testimony.name}
+            testimonialText={testimony.description}
+            rating={4.5}
+            imageUrl={testimony.logo}
           />
         </SwiperSlide>
       ))}

@@ -1,9 +1,6 @@
-import { BsTelephone } from "react-icons/bs";
-import { CiLocationOn } from "react-icons/ci";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowRightLong, FaEnvelope } from "react-icons/fa6";
 import { IoArrowRedo } from "react-icons/io5";
-import { MdOutlineMail } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import facebook_icon from "../../../assets/icons/facebook_icon.svg";
 import insta_icon from "../../../assets/icons/instagram_icon.svg";
 import linkdin_icon from "../../../assets/icons/linkdin.svg";
@@ -12,8 +9,10 @@ import whatsapp_icon from "../../../assets/icons/whatsapp_icon.svg";
 import youtube_icon from "../../../assets/icons/youtube_icon.svg";
 import logo from "../../../assets/images/QRIO.png";
 import { SOCIAL_LINKS } from "../../../constants/constant";
+import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <footer className="flex justify-center">
       <section className="container p-10">
@@ -27,7 +26,10 @@ const Footer = () => {
             </p>
           </span>
 
-          <button className=" h-12 rounded-full flex items-center justify-end px-5 text-lg font-bold bg-transparent bg-white text-purple-700">
+          <button
+            onClick={() => navigate("/contact")}
+            className=" h-12 rounded-full flex items-center justify-end px-5 text-lg font-bold bg-transparent bg-white text-purple-700"
+          >
             Contact Us
             <span className="mx-1">
               <FaArrowRightLong />
@@ -46,16 +48,16 @@ const Footer = () => {
               deleniti, animi aliquam hic. Maxime.
             </p>
             <span className="flex text-md my-2">
-              <CiLocationOn className="text-xl font-bold mx-2" />
-              <p>207-Navneet plaza, Palasia, Indore </p>
+              <FaMapMarkerAlt className="text-blue-400 mx-2" />{" "}
+              <p> {SOCIAL_LINKS.ADDRESS}</p>
             </span>
             <span className="flex text-md my-2">
-              <MdOutlineMail className="text-xl font-bold mx-2" />
-              <p>qrioexample@youpmail.com</p>
+              <FaEnvelope className="text-red-400 mx-2" />
+              <p> {SOCIAL_LINKS.EMAIL}</p>
             </span>
             <span className="flex text-md my-2">
-              <BsTelephone className="text-xl font-bold mx-2" />
-              <p>8269024132</p>
+              <FaPhoneAlt className="text-green-400 mx-2" />
+              <p>{SOCIAL_LINKS.CONTACT}</p>
             </span>
           </div>
           <div className="flex items-center flex-col">
@@ -64,22 +66,22 @@ const Footer = () => {
             </h1>
             <ul className="text-gray-300">
               <li className="text-md hover:text-fuchsia-500 py-2">
-                <Link to="/qrio-ui/">Home</Link>
+                <Link to="/">Home</Link>
               </li>
               <li className="text-md hover:text-fuchsia-500 py-2">
-                <Link to="/qrio-ui/about">About</Link>
+                <Link to="/about">About</Link>
               </li>
               <li className="text-md hover:text-fuchsia-500 py-2">
-                <Link to="/qrio-ui/services">Services</Link>
+                <Link to="/services">Services</Link>
               </li>
               <li className="text-md hover:text-fuchsia-500 py-2">
-                <Link to="/qrio-ui/contact">Contact</Link>
+                <Link to="/contact">Contact</Link>
               </li>
               <li className="text-md hover:text-fuchsia-500 py-2">
-                <Link to="/qrio-ui/blog">Blog</Link>
+                <Link to="/blog">Blog</Link>
               </li>
               <li className="text-md hover:text-fuchsia-500 py-2">
-                <Link to="/qrio-ui/portfolio">Portfolio</Link>
+                <Link to="/portfolio">Portfolio</Link>
               </li>
             </ul>
           </div>
@@ -150,7 +152,7 @@ const Footer = () => {
                   className="text-white text-4xl m-3"
                 />
               </Link>
-              <Link target="_blank" to={SOCIAL_LINKS.CONTACT}>
+              <Link target="_blank" to={SOCIAL_LINKS.THREAD}>
                 <img
                   src={thread_icon}
                   alt="linkedin"

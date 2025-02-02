@@ -7,6 +7,9 @@ import Img from "../../components/Img";
 import Paragraph from "../../components/Paragraph";
 import Heading from "../../components/Heading";
 import Marquee from "../../components/Marque/Marque";
+import ProfileCard from "../../components/Founders";
+import { FOUNDER_DETAILS } from "../../constants/constant";
+import TestimonialCarousel from "../../components/Testimonials";
 // import ServiceCard from "../../components/Cards/ServiceCard";
 // import { GalaxyParallax } from "../../components/Gaxaxy";
 // import Marquee from "../../components/Marque";
@@ -17,6 +20,12 @@ import Marquee from "../../components/Marque/Marque";
 // import styles from "./styles.module.scss";
 // import VisionSection from "./VisionSection";
 // import WhyUsSection from "./WhyUsSection";
+
+const GradiantEffect: React.FC = () => {
+  return (
+    <div className="absolute right-0 w-full md:w-3/4 h-full bg-gradient-to-r from-transparent via-purple-700 to-purple-500 opacity-35 blur-[100px]"></div>
+  );
+};
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -57,8 +66,7 @@ const HomePage = () => {
   return (
     <main style={{ height: "500vh" }} className="py-10">
       <section className="relative flex flex-col md:flex-row justify-center md:justify-end items-center">
-        <div className="absolute right-0 w-full md:w-3/4 h-full bg-gradient-to-r from-transparent via-purple-700 to-purple-500 opacity-35 blur-[100px]"></div>
-
+        <GradiantEffect />
         <div className="w-full md:w-2/3 flex justify-center px-4 md:px-0">
           <div className="flex justify-center items-start flex-col text-center md:text-left">
             <Heading
@@ -96,8 +104,25 @@ const HomePage = () => {
           />
         </div>
       </section>
-      <section className="h-[100vh]"></section>
-      <section className="h-auto ">
+      <section className="h-[100vh] ">
+        <div className="text-white flex flex-col justify-center items-center p-5">
+          <Paragraph size="text2xl">Meet The</Paragraph>
+          <Heading size="heading6xl">SQUAD BOSSES</Heading>
+        </div>
+        <div className="flex p-10 justify-evenly items-center">
+          {FOUNDER_DETAILS.map((founder) => {
+            return (
+              <ProfileCard
+                description={founder.desc}
+                imageUrl={founder.image}
+                name={founder.name}
+                key={founder.name}
+              />
+            );
+          })}
+        </div>
+      </section>
+      <section className="h-auto py-40">
         <div
           style={{
             transform: "rotate(-6deg)",
@@ -114,6 +139,21 @@ const HomePage = () => {
         >
           <Marquee />
         </div>
+        <div className="flex justify-center items-center py-20 flex-col">
+          <Heading size="heading7xl" className="text-white">
+            Testimonials
+          </Heading>
+          <Paragraph size="text2xl">
+            But don't just take our word for it. Hear from our clients who we've
+            helped reach the marketing hall of fame!
+          </Paragraph>
+          <div className="container ">
+            <TestimonialCarousel />
+          </div>
+        </div>
+      </section>
+      <section className="h-[100vh] relative">
+        <GradiantEffect />
       </section>
     </main>
   );

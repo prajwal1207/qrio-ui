@@ -172,14 +172,14 @@ export const SOCIAL_LINKS = {
   FACEBOOK: "https://www.facebook.com/share/1DxwTAG7qQ9o2Pkc/?mibextid=LQQJ4d",
   LINKEDIN: "https://www.linkedin.com/company/qrio-in/",
   YOUTUBE: "https://www.youtube.com/@qrio.marketing",
-  THREAD: "",
+  THREAD: "https://www.threads.net/@qrio.in",
   EMAIL: "hello.qrio@gmail.com",
   CONTACT: "+91 9993531777",
+  ADDRESS: '207-Navneet plaza, Palasia, Indore (M.P)'
 };
 
 import img_neelanshi from "../assets/images/img-neelanshi.jpg";
 import img_yashi from "../assets/images/img-yashi.jpg";
-import img_samyak from "../assets/images/img-samyak.jpg";
 import img_aayush from "../assets/images/img-aayush.jpg";
 
 export const FOUNDER_DETAILS = [
@@ -201,22 +201,7 @@ just effective; they’re revolutionary. With a blend of intuition and analytics
 Qrio’s campaigns aren't just seen; they're remembered.`,
     image: img_neelanshi,
   },
-  {
-    name: "Samyak Gandhi",
-    title: "The Production Prodigy",
-    desc: `Lights, camera, action! Samyak is the Spielberg of production, orchestrating every frame to
-perfection. Whether it's a photoshoot or a commercial, he makes sure every pixel pops and
-every shot tells a story. Under his watch, production isn’t just a process; it’s a performance.`,
-    image: img_samyak,
-  },
-  {
-    name: "Samyak Gandhi",
-    title: "The Production Prodigy",
-    desc: `Lights, camera, action! Samyak is the Spielberg of production, orchestrating every frame to
-perfection. Whether it's a photoshoot or a commercial, he makes sure every pixel pops and
-every shot tells a story. Under his watch, production isn’t just a process; it’s a performance.`,
-    image: img_samyak,
-  },
+
   {
     name: "Ayush Maheshwari",
     title: "The Business Brain",

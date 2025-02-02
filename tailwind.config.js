@@ -10,6 +10,7 @@ export default {
       },
       backgroundImage: {
         "custom-gradient": "linear-gradient(to right, #8A00FF, #D900FE)",
+        'card-gradient': 'linear-gradient(to bottom right, #121212, #000000)',
       },
     },
   },
