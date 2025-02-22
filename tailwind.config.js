@@ -7,6 +7,8 @@ export default {
         customPurpleStart: "#8A00FF",
         customPurpleEnd: "#D900FE",
         customBlue: "#020c14",
+        Purple :'#31004A'
+
       },
       backgroundImage: {
         "custom-gradient": "linear-gradient(to right, #8A00FF, #D900FE)",

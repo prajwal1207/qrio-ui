@@ -1,6 +1,6 @@
 import ServiceCard from "../../components/Cards/ServiceCard";
 import { LeftGradiantEffect, RightGradiantEffect } from "../home";
-import img from "../../assets/images/bg.jpeg";
+import { SERVICES } from "../../constants/constant";
 
 const ServicesPage = () => {
   return (
@@ -26,12 +26,12 @@ const ServicesPage = () => {
       <section className="relative h-auto flex items-center justify-center">
         <RightGradiantEffect />
         <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {Array.from({ length: 18 }).map((_, index) => (
+          {SERVICES.map((item, index) => (
             <ServiceCard
               key={index}
-              title="Graphic Designing"
-              description="Create stunning visuals with creative designs."
-              image={img}
+              title={item.title}
+              description={item.desc}
+              image={item.icon}
             />
           ))}
         </div>

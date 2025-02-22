@@ -70,74 +70,75 @@ export const TESTIMONIAL: TestimonyType[] = [
 
 // services
 
-import img1 from '../assets/services page images 00/12085246_20944055.jpg'
-import img2 from '../assets/services page images 00/3276803.jpg'
-import img3 from '../assets/services page images 00/4102879_971.jpg'
-import img4 from '../assets/services page images 00/5453989_2805145.jpg'
-import img5 from '../assets/services page images 00/5f474595917c102fcedb0ae881ad0d85.jpg'
+// import img10 from '../assets/services page images 00/12085246_20944055.jpg'
+import img1 from '../assets/services page images 00/3276803.jpg'
+import img8 from '../assets/services page images 00/4102879_971.jpg'
+import img9 from '../assets/services page images 00/5453989_2805145.jpg'
+import img4 from '../assets/services page images 00/5f474595917c102fcedb0ae881ad0d85.jpg'
 import img6 from '../assets/services page images 00/7f1d91eef2bac5b609ef5c9229aa4a6d.jpg'
-import img7 from '../assets/services page images 00/aa1d1631e16eb699e8e7c07fd69561d6.jpg'
-import img8 from '../assets/services page images 00/brand identity.png'
-import img9 from '../assets/services page images 00/d52d7cdd20736a01b0978e04ac276d39.jpg'
-import img10 from '../assets/services page images 00/d769e3042056ff35854840a15bc55cb3.jpg'
+import img5 from '../assets/services page images 00/aa1d1631e16eb699e8e7c07fd69561d6.jpg'
+import img7 from '../assets/services page images 00/brand identity.png'
+import img3 from '../assets/services page images 00/d52d7cdd20736a01b0978e04ac276d39.jpg'
+import img2 from '../assets/services page images 00/d769e3042056ff35854840a15bc55cb3.jpg'
 
 
 export const SERVICES = [
   {
     id: 1,
-    title: "Digital Marketing",
-    desc: "Where clicks meet bricks and business grows",
+    title: "Package Designing",
+    desc: "Crafting captivating packages that enhance brand appeal and boost sales.",
     icon: img1,
   },
   {
     id: 2,
-    title: "Social Media Marketing",
-    desc: "Turning your likes into loves and shares into stares",
+    title: "Graphic Designing",
+    desc: "Creating visuals that transform ideas into engaging and memorable designs.",
     icon: img2,
   },
   {
     id: 3,
-    title: "Designing",
-    desc: "Because your brand deserves to dress up too.",
+    title: "Video Editing",
+    desc: "Polishing videos to perfection, ensuring every frame tells your story.",
     icon: img3,
   },
   {
     id: 4,
-    title: "Photography",
-    desc: "Capturing your best side, every side, and the upside.",
+    title: "Photo & Videography",
+    desc: "Capturing moments with a creative lens for lasting impressions.",
     icon: img4,
   },
   {
     id: 5,
     title: "Offline Marketing",
-    desc: "Taking it to the streets, and the billboards, and the radios.",
+    desc: "Delivering impactful messages through traditional yet powerful channels.",
     icon: img5,
   },
   {
     id: 6,
-    title: " PR Services",
-    desc: "Making sure the world knows how amazing you are.",
+    title: "PR Services",
+    desc: "Building strong reputations and ensuring your brand shines in the spotlight.",
     icon: img6,
   },
   {
     id: 7,
-    title: " PR Services",
-    desc: "Making sure the world knows how amazing you are.",
+    title: "Brand Identity",
+    desc: "Establishing a unique and cohesive identity that stands out in the market.",
     icon: img7,
   },
   {
     id: 8,
-    title: " PR Services",
-    desc: "Making sure the world knows how amazing you are.",
+    title: "Website Designing",
+    desc: "Designing intuitive and visually stunning websites for digital success.",
     icon: img8,
   },
   {
     id: 9,
-    title: " PR Services",
-    desc: "Making sure the world knows how amazing you are.",
+    title: "Social Media Marketing",
+    desc: "Boosting your brand's online presence with creative and strategic campaigns.",
     icon: img9,
   },
 ];
+
 
 export const SOCIAL_LINKS = {
   INSTAGRAM: "https://www.instagram.com/qrio.in?igsh=aHJ1enBlbHhwZTc3",

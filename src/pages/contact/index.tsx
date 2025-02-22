@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { SOCIAL_LINKS } from "../../constants/constant";
+import { LeftGradiantEffect, RightGradiantEffect } from "../home";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState<any>({
     name: "",
     email: "",
     phone: "",
-    subject: "",
     company: "",
     message: "",
   });
@@ -47,81 +47,86 @@ const ContactPage = () => {
   };
 
   return (
-    <main>
-      <section className="text-white min-h-screen flex  items-center justify-center p-4">
-        <div className="w-1/2 "></div>
-        <div className="w-1/2 max-w-2xl p-10 bg-gray-900 rounded-lg shadow-lg">
-          <h2 className="text-3xl font-bold mb-6 text-center">Contact Us</h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            {[
-              { label: "Name", name: "name", type: "text" },
-              { label: "Email", name: "email", type: "email" },
-              { label: "Phone", name: "phone", type: "tel" },
-              { label: "Company", name: "company", type: "text" },
-              { label: "Subject", name: "subject", type: "text" },
-            ].map(({ label, name, type }) => (
-              <div key={name}>
-                <label className="block text-sm font-medium mb-2">
-                  {label}
-                </label>
+    <main className=" text-white min-h-screen py-16  h-[170vh] my-28">
+      <section className="h-[50vh]  relative flex justify-center items-center">
+        <RightGradiantEffect />
+        <LeftGradiantEffect />
+        <div className="relative flex justify-center items-center  ">
+          <span className="absolute top-10 -left-10 text-white text-7xl">
+            ✦
+          </span>
+          <h1 className="text-[15rem] font-bold uppercase text-transparent stroke-1 stroke-white">
+          GET IN TOUCH
+          </h1>
+          <span className="absolute bottom-0 -right-2 text-white text-4xl">
+            ✦
+          </span>
+          <span className="absolute bottom-8 -right-10 text-white text-6xl">
+            ✦✦
+          </span>
+        </div>
+      </section>
+
+      <section className="flex flex-col md:flex-row items-center justify-center p-12 h-[100vh]">
+        <div className="w-full h-full md:w-1/2 p-32 bg-gradient-to-br from-purple-900 to-gray-900 rounded-l-2xl ">
+         
+          <p className="text-lg text-gray-300 mb-8">
+            We'd love to hear from you. Please fill out the form below and we'll
+            get back to you as soon as possible.
+          </p>
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {["name", "email", "phone", "company",].map((field) => (
+              <div key={field}>
                 <input
-                  type={type}
-                  name={name}
-                  value={formData[name]}
+                  type={field === "email" ? "email" : "text"}
+                  name={field}
+                  value={formData[field]}
                   onChange={handleChange}
-                  className={`w-full px-4 py-2 bg-gray-700 border-2 border-transparent focus:border-gradient-to-r from-purple-500 to-pink-500 rounded-lg focus:outline-none`}
-                  placeholder={`Enter your ${label.toLowerCase()}`}
+                  placeholder={`Enter your ${field}`}
+                  className="w-full p-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-pink-500 focus:outline-none"
                 />
-                {errors[name] && (
-                  <p className="text-red-500 text-sm mt-1">{errors[name]}</p>
+                {errors[field] && (
+                  <p className="text-red-500 text-[10px] mt-1">{errors[field]}</p>
                 )}
               </div>
             ))}
             <div>
-              <label className="block text-sm font-medium mb-2">Message</label>
               <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-4 py-2 bg-gray-700 border-2 border-transparent focus:border-gradient-to-r from-purple-500 to-pink-500 rounded-lg focus:outline-none"
-                rows={4}
                 placeholder="Enter your message"
+                className="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-pink-500 focus:outline-none"
+                rows={5}
               ></textarea>
               {errors.message && (
-                <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+                <p className="text-red-500 text-[10px] mt-1">{errors.message}</p>
               )}
             </div>
-            <div>
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 px-4 rounded-lg hover:opacity-80 focus:outline-none"
-              >
-                Submit
-              </button>
-            </div>
+            <button
+              type="submit"
+              className="w-full bg-gradient-to-r from-purple-500 to-pink-500 py-3 rounded-lg text-white font-bold hover:opacity-90 transition"
+            >
+              Submit
+            </button>
           </form>
         </div>
-      </section>
-      <section className=" flex flex-col md:flex-row justify-between items-center  p-8 rounded-xl shadow-lg text-white">
-        <div className="w-full md:w-1/2 mb-6 md:mb-0">
-          <h3 className="text-2xl font-bold mb-4 text-gray-100">Our Address</h3>
-          <div className="space-y-3 text-gray-300">
+
+        <div className="w-full md:w-1/2 p-12 flex flex-col items-start space-y-4 bg-black border-2 border-purple-700 h-full rounded-r-2xl justify-center box-border">
+          <h3 className="text-4xl font-bold mb-4 text-white">Our Address</h3>
+          <div className="text-gray-300 space-y-2">
             <p className="flex items-center gap-2 text-lg">
               <FaMapMarkerAlt className="text-blue-400" />{" "}
               {SOCIAL_LINKS.ADDRESS}
             </p>
             <p className="flex items-center gap-2 text-lg">
-              <FaPhoneAlt className="text-green-400" />
-              {SOCIAL_LINKS.CONTACT}
+              <FaPhoneAlt className="text-green-400" /> {SOCIAL_LINKS.CONTACT}
             </p>
             <p className="flex items-center gap-2 text-lg">
               <FaEnvelope className="text-red-400" /> {SOCIAL_LINKS.EMAIL}
             </p>
           </div>
-        </div>
-
-        <div className="w-full md:w-1/2 flex justify-center">
-          <div className="relative w-full h-64 overflow-hidden rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+          <div className="w-full h-[60vh] overflow-hidden rounded-lg shadow-lg">
             <iframe
               title="Google Map"
               className="w-full h-full border-none"
@@ -129,9 +134,9 @@ const ContactPage = () => {
               allowFullScreen
             ></iframe>
           </div>
-          ``
         </div>
       </section>
+      <div className="line_break"></div>
     </main>
   );
 };

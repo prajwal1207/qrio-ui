@@ -31,15 +31,17 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Fullscreen Image Section with Centered Text */}
         <section className="relative h-[250vh] w-full overflow-hidden">
-          {/* Fullscreen Background Image */}
           <Img
             src={bg}
             className="absolute top-0 left-0 w-full h-full object-cover"
+            style={{
+              maskImage:
+                "radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)",
+              WebkitMaskImage:
+                "radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)",
+            }}
           />
-
-          {/* Top Centered Text */}
           <div className="absolute top-10 w-full flex flex-col items-center text-center z-10 p-4">
             <Heading size="heading6xl" className="text-white mb-4">
               The Path We Carved
@@ -51,7 +53,7 @@ const AboutPage = () => {
 
             <Paragraph
               size="text2xl"
-              className="text-white max-w-4xl leading-relaxed text-[#31004A]"
+              className="max-w-4xl leading-relaxed text-[#31004A]"
             >
               Ever wondered what happens when three college buddies with a knack{" "}
               <br />
@@ -71,12 +73,14 @@ const AboutPage = () => {
         {/* SQUAD BOSSES Section */}
         <section className="min-h-[100vh] flex flex-col items-center justify-center bg-black">
           <div className="text-white flex flex-col justify-center items-center p-5">
-            <Paragraph size="text2xl">Meet The</Paragraph>
+            <Paragraph size="text2xl" className="text-bolder text-4xl">
+              Meet The
+            </Paragraph>
             <Heading
               size="heading6xl"
               className="text-transparent bg-clip-text bg-custom-gradient font-bold text-3xl md:text-7xl"
             >
-              SQUAD BOSSES
+              CO-FOUNDERS
             </Heading>
           </div>
           <div className="flex p-10 justify-evenly items-center flex-wrap">

@@ -76,7 +76,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 
       <div className="absolute inset-0 bg-black bg-opacity-80 p-6 flex flex-col justify-start items-center text-center transition-transform duration-500 translate-y-[83%] group-hover:translate-y-0">
         <h3 className="text-white text-2xl font-bold">{title}</h3>
-        <p className="text-gray-300 text-base mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <p className="text-gray-300 text-base mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xl">
           {description}
         </p>
       </div>

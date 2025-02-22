@@ -11,6 +11,7 @@ import video2 from "../../assets/QRIO INTRO.mp4";
 import Img from "../../components/Img";
 import img1 from "../../assets/Group 86.png";
 import img2 from "../../assets/why us.png";
+import { useRef } from "react";
 
 export const RightGradiantEffect: React.FC = () => {
   return (
@@ -27,6 +28,25 @@ export const LeftGradiantEffect: React.FC = () => {
 gsap.registerPlugin(ScrollTrigger);
 
 const HomePage = () => {
+  const videoRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.fromTo(
+      videoRef.current,
+      { scale: 1 },
+      {
+        scale: 1.1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: videoRef.current,
+          start: "top 60%",
+          end: "top 20%",
+          scrub: 1,
+        },
+      }
+    );
+  }, []);
+
   const animateSections = () => {
     const sections = [
       { id: "#sec1", x: -300, trigger: "#section2" },
@@ -61,7 +81,7 @@ const HomePage = () => {
   useGSAP(animateSections);
 
   return (
-    <main style={{ height: "550vh" }} className="py-10">
+    <main style={{ height: "570vh" }} className="py-10">
       <section className="relative flex flex-col md:flex-row justify-center items-center">
         <div className="relative w-full md:w-4/5 h-[85vh] flex justify-center items-center">
           <video
@@ -96,9 +116,6 @@ const HomePage = () => {
               where your brand not only grows but <br />
               thrives with flair!
             </Paragraph>
-            <span id="banner_desc" className="my-3">
-              <Button text="get started" />
-            </span>
           </div>
         </div>
       </section>
@@ -137,7 +154,6 @@ const HomePage = () => {
         </div>
       </section>
       <section className="relative h-[100vh] flex items-center justify-center">
-        <LeftGradiantEffect />
         <div className="flex h-full w-full">
           <div className="w-1/2 flex justify-center items-center">
             <Img
@@ -146,18 +162,18 @@ const HomePage = () => {
               className="max-w-[80%] max-h-[80%] object-contain rounded-xl"
             />
           </div>
-          <div className="w-1/2 flex flex-col justify-center items-center p-8 space-y-6">
+          <div className="w-1/2 flex flex-col justify-center items-center text-right p-8 space-y-6">
             <div>
               <Heading
                 size="heading7xl"
-                className="text-transparent bg-clip-text bg-custom-gradient font-bold text-3xl md:text-7xl"
+                className="text-transparent bg-clip-text bg-custom-gradient font-bold text-3xl md:text-7xl "
               >
-                WHY <br /> & QRIO ?
+                <span className="text-6xl" >WHY</span> <br /> <strong> QRIO ?</strong>
               </Heading>
 
               <Paragraph
                 size="text2xl"
-                className="text-lg md:text-2xl leading-relaxed text-left text-white"
+                className="text-lg md:text-2xl leading-relaxed text-left text-white text-right"
               >
                 Our mission is to transform brands into legends. <br />
                 How? By crafting marketing strategies that <br />
@@ -167,13 +183,17 @@ const HomePage = () => {
               </Paragraph>
             </div>
           </div>
-
-          {/* Right Side: Centered Image */}
         </div>
       </section>
-      <section className="h-[100vh] my-32 ">
-        <div className="my-20">
-          <video autoPlay loop muted className="w-full h-full object-cover ">
+      <section className="h-[120vh] my-32 overflow-hidden">
+        <div className="my-20 p-20">
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            className="w-full h-full object-cover rounded-lg"
+          >
             <source src={video2} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -209,8 +229,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <div className="line_break" ></div>
-     
     </main>
   );
 };
