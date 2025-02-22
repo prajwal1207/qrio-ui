@@ -1,25 +1,16 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import img from "../../assets/images/web 02 1.png";
 import Button from "../../components/Buttons/Button";
-import Img from "../../components/Img";
 import Paragraph from "../../components/Paragraph";
 import Heading from "../../components/Heading";
 import Marquee from "../../components/Marque/Marque";
-import ProfileCard from "../../components/Founders";
-import { FOUNDER_DETAILS } from "../../constants/constant";
 import TestimonialCarousel from "../../components/Testimonials";
-// import ServiceCard from "../../components/Cards/ServiceCard";
-// import { GalaxyParallax } from "../../components/Gaxaxy";
-// import Marquee from "../../components/Marque";
-// import TestimonialCarousel from "../../components/Testimonials";
-// import { CLIENTS_LOGO, SERVICES } from "../../constants/constant";
-// import AboutSection from "./AboutSection";
-// import BannerSection from "./BannerSection";
-// import styles from "./styles.module.scss";
-// import VisionSection from "./VisionSection";
-// import WhyUsSection from "./WhyUsSection";
+import video from "../../assets/qrio intro video.mp4";
+import video2 from "../../assets/QRIO INTRO.mp4";
+import Img from "../../components/Img";
+import img1 from "../../assets/Group 86.png";
+import img2 from "../../assets/why us.png";
 
 export const RightGradiantEffect: React.FC = () => {
   return (
@@ -32,8 +23,6 @@ export const LeftGradiantEffect: React.FC = () => {
     <div className="absolute left-[-600px] w-full md:w-3/4 h-full bg-gradient-to-r from-transparent via-purple-700 to-purple-500 opacity-35 blur-[200px]"></div>
   );
 };
-
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -72,11 +61,20 @@ const HomePage = () => {
   useGSAP(animateSections);
 
   return (
-    <main style={{ height: "500vh" }} className="py-10">
-      <section className="relative flex flex-col md:flex-row justify-center md:justify-end items-center">
-        <RightGradiantEffect />
-        <div className="w-full md:w-2/3 flex justify-center px-4 md:px-0">
-          <div className="flex justify-center items-start flex-col text-center md:text-left">
+    <main style={{ height: "550vh" }} className="py-10">
+      <section className="relative flex flex-col md:flex-row justify-center items-center">
+        <div className="relative w-full md:w-4/5 h-[85vh] flex justify-center items-center">
+          <video
+            autoPlay
+            loop
+            muted
+            className="w-full h-full object-cover rounded-xl"
+          >
+            <source src={video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 bg-black bg-opacity-50 rounded-xl"></div>
+          <div className="absolute flex flex-col items-center text-center md:text-left w-full px-6 z-10">
             <Heading
               size="heading7xl"
               className="text-transparent bg-clip-text bg-custom-gradient font-bold text-3xl md:text-7xl"
@@ -85,17 +83,17 @@ const HomePage = () => {
             </Heading>
             <Heading
               size="heading3xl"
-              className="text-center md:text-left text-gray-100 text-2xl md:text-4xl"
+              className="text-center md:text-left text-white text-2xl md:text-4xl"
             >
               CURATING YOUR BRAND
             </Heading>
             <Paragraph
               id="banner_desc"
-              className="tracking-wider leading-6 font-bold py-3 text-xl md:text-xl text-gray-400"
+              className="tracking-wider leading-6 font-bold py-3 text-xl md:text-2xl text-white text-center"
             >
-              Discover Qrio, where creativity meets quirkiness, <br />
-              and marketing strategies come with a side of pizzazz. <br />
-              Dive into a world where your brand not only grows but <br />{" "}
+              Discover Qrio, where creativity meets quirkiness, and marketing
+              strategies <br /> come with a side of pizzazz. Dive into a world
+              where your brand not only grows but <br />
               thrives with flair!
             </Paragraph>
             <span id="banner_desc" className="my-3">
@@ -103,31 +101,82 @@ const HomePage = () => {
             </span>
           </div>
         </div>
+      </section>
+      <section className="relative h-[100vh] flex items-center justify-center">
+        <RightGradiantEffect />
+        <div className="flex h-full w-full">
+          <div className="w-1/2 flex flex-col justify-center items-center p-8 space-y-6">
+            <div>
+              <Heading
+                size="heading7xl"
+                className="text-transparent bg-clip-text bg-custom-gradient font-bold text-3xl md:text-7xl"
+              >
+                MISSION <br /> & VISION
+              </Heading>
 
-        <div className="relative w-full md:w-1/3 flex justify-end mt-8 md:mt-0">
-          <Img
-            src={img}
-            className="h-[400px] md:h-[800px] relative z-10"
-            alt="img"
-          />
+              <Paragraph
+                size="text2xl"
+                className="text-lg md:text-2xl leading-relaxed text-left text-white"
+              >
+                Our mission is to transform brands into legends. <br />
+                How? By crafting marketing strategies that <br />
+                are not only effective but also enchanting. <br />
+                Our vision is to lead the marketing revolution <br />
+                from Indore to the world, one campaign at a time.
+              </Paragraph>
+            </div>
+          </div>
+
+          <div className="w-1/2 flex justify-center items-center">
+            <Img
+              src={img1}
+              alt="Mission & Vision"
+              className="max-w-[80%] max-h-[80%] object-contain rounded-xl"
+            />
+          </div>
         </div>
       </section>
-      <section className="h-[100vh] ">
-        <div className="text-white flex flex-col justify-center items-center p-5">
-          <Paragraph size="text2xl">Meet The</Paragraph>
-          <Heading size="heading6xl">SQUAD BOSSES</Heading>
+      <section className="relative h-[100vh] flex items-center justify-center">
+        <LeftGradiantEffect />
+        <div className="flex h-full w-full">
+          <div className="w-1/2 flex justify-center items-center">
+            <Img
+              src={img2}
+              alt="Mission & Vision"
+              className="max-w-[80%] max-h-[80%] object-contain rounded-xl"
+            />
+          </div>
+          <div className="w-1/2 flex flex-col justify-center items-center p-8 space-y-6">
+            <div>
+              <Heading
+                size="heading7xl"
+                className="text-transparent bg-clip-text bg-custom-gradient font-bold text-3xl md:text-7xl"
+              >
+                WHY <br /> & QRIO ?
+              </Heading>
+
+              <Paragraph
+                size="text2xl"
+                className="text-lg md:text-2xl leading-relaxed text-left text-white"
+              >
+                Our mission is to transform brands into legends. <br />
+                How? By crafting marketing strategies that <br />
+                are not only effective but also enchanting. <br />
+                Our vision is to lead the marketing revolution <br />
+                from Indore to the world, one campaign at a time.
+              </Paragraph>
+            </div>
+          </div>
+
+          {/* Right Side: Centered Image */}
         </div>
-        <div className="flex p-10 justify-evenly items-center">
-          {FOUNDER_DETAILS.map((founder) => {
-            return (
-              <ProfileCard
-                description={founder.desc}
-                imageUrl={founder.image} 
-                name={founder.name}
-                key={founder.name}
-              />
-            );
-          })}
+      </section>
+      <section className="h-[100vh] my-32 ">
+        <div className="my-20">
+          <video autoPlay loop muted className="w-full h-full object-cover ">
+            <source src={video2} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
       <section className="h-auto py-40">
@@ -160,11 +209,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <section className="h-[100vh] relative">
-        <RightGradiantEffect />
-        <LeftGradiantEffect />
-      </section>
-      <section className="h-[100vh] relative"></section>
+      <div className="line_break" ></div>
+     
     </main>
   );
 };
