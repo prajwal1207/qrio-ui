@@ -21,11 +21,19 @@ import TestimonialCarousel from "../../components/Testimonials";
 // import VisionSection from "./VisionSection";
 // import WhyUsSection from "./WhyUsSection";
 
-const GradiantEffect: React.FC = () => {
+export const RightGradiantEffect: React.FC = () => {
   return (
     <div className="absolute right-0 w-full md:w-3/4 h-full bg-gradient-to-r from-transparent via-purple-700 to-purple-500 opacity-35 blur-[100px]"></div>
   );
 };
+
+export const LeftGradiantEffect: React.FC = () => {
+  return (
+    <div className="absolute left-[-600px] w-full md:w-3/4 h-full bg-gradient-to-r from-transparent via-purple-700 to-purple-500 opacity-35 blur-[200px]"></div>
+  );
+};
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,7 +74,7 @@ const HomePage = () => {
   return (
     <main style={{ height: "500vh" }} className="py-10">
       <section className="relative flex flex-col md:flex-row justify-center md:justify-end items-center">
-        <GradiantEffect />
+        <RightGradiantEffect />
         <div className="w-full md:w-2/3 flex justify-center px-4 md:px-0">
           <div className="flex justify-center items-start flex-col text-center md:text-left">
             <Heading
@@ -114,7 +122,7 @@ const HomePage = () => {
             return (
               <ProfileCard
                 description={founder.desc}
-                imageUrl={founder.image}
+                imageUrl={founder.image} 
                 name={founder.name}
                 key={founder.name}
               />
@@ -140,7 +148,7 @@ const HomePage = () => {
           <Marquee />
         </div>
         <div className="flex justify-center items-center py-20 flex-col">
-          <Heading size="heading7xl" className="text-white">
+          <Heading size="heading7xl" className="text-white glow-text">
             Testimonials
           </Heading>
           <Paragraph size="text2xl">
@@ -153,8 +161,10 @@ const HomePage = () => {
         </div>
       </section>
       <section className="h-[100vh] relative">
-        <GradiantEffect />
+        <RightGradiantEffect />
+        <LeftGradiantEffect />
       </section>
+      <section className="h-[100vh] relative"></section>
     </main>
   );
 };
