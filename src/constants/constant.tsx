@@ -140,6 +140,23 @@ export const SERVICES = [
 ];
 
 
+
+
+import slide1 from '../assets/Pitchdeck/0.jpg'
+import slide2 from '../assets/Pitchdeck/1.jpg'
+import slide3 from '../assets/Pitchdeck/2.jpg'
+import slide4 from '../assets/Pitchdeck/3.jpg'
+import slide5 from '../assets/Pitchdeck/4.jpg'
+import slide6 from '../assets/Pitchdeck/5.jpg'
+import slide7 from '../assets/Pitchdeck/6.jpg'
+import slide8 from '../assets/Pitchdeck/7.jpg'
+import slide9 from '../assets/Pitchdeck/8.jpg'
+import slide10 from '../assets/Pitchdeck/9.jpg'
+import slide11 from '../assets/Pitchdeck/10.jpg'
+
+export const  PITCHDECK = [slide1,slide2,slide3,slide4,slide5,slide6,slide7,slide8,slide9,slide10,slide11]
+
+
 export const SOCIAL_LINKS = {
   INSTAGRAM: "https://www.instagram.com/qrio.in?igsh=aHJ1enBlbHhwZTc3",
   FACEBOOK: "https://www.facebook.com/share/1DxwTAG7qQ9o2Pkc/?mibextid=LQQJ4d",

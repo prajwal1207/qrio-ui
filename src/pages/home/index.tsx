@@ -1,7 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Button from "../../components/Buttons/Button";
 import Paragraph from "../../components/Paragraph";
 import Heading from "../../components/Heading";
 import Marquee from "../../components/Marque/Marque";

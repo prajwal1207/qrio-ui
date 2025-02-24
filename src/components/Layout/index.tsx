@@ -34,8 +34,8 @@ const Layout = () => {
   return (
     <>
       <Navbar link={activeLink} seLink={setlink} />
-      <main className={styles.content}>
-        <div id="content">
+      <main  id="content_wrap" className={styles.content}>
+        <div id="content" >
           <GalaxyParallax starCount={8000}>
             <Outlet />
           </GalaxyParallax>
