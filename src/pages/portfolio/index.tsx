@@ -49,7 +49,7 @@ const PortfolioPage = () => {
       >
         {PITCHDECK.map((url,index) => {
           return (
-            <div  key={index} className="h-[100vh] w-[100vw] flex justify-center items-center">
+            <div  key={index} className="h-[100vh] w-[100vw] flex justify-center items-center ">
               <Img src={url} alt="" className="h-[80vh] w-[80vw] rounded-lg " />
             </div>
           );

@@ -167,7 +167,8 @@ const HomePage = () => {
                 size="heading7xl"
                 className="text-transparent bg-clip-text bg-custom-gradient font-bold text-3xl md:text-7xl "
               >
-                <span className="text-6xl" >WHY</span> <br /> <strong> QRIO ?</strong>
+                <span className="text-6xl">WHY</span> <br />{" "}
+                <strong> QRIO ?</strong>
               </Heading>
 
               <Paragraph
