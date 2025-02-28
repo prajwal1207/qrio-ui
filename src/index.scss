@@ -1,0 +1,80 @@
+@import "./assets/sass/_variables.scss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family-poppins;
+  font-weight: $inter-regular;
+  overflow-x: hidden;
+  // height: 100vh;
+  background-color: $color-dark; 
+}
+
+.stroke-1 {
+  -webkit-text-stroke: 2px white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-poppins;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+}
+
+.line_break {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #7407b3, transparent);
+}
+
+.swiper-pagination {
+  bottom: -10px !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #bf4fff !important;
+  padding: 7px;
+}
+.swiper-pagination-bullet-active {
+  background-color: #a237e0 !important;
+  padding: 7px 15px;
+  border-radius: 20px;
+}
+
+.swiper-pagination {
+  padding: 10px;
+}
+
+.glow-text {
+  animation: neon6 2s ease-in-out infinite alternate;
+}
+
+
+
+@keyframes neon6 {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 5px #fff, 0 0 8px #ff00de,
+      0 0 10px #ff00de, 0 0 12px #ff00de, 0 0 15px #ff00de;
+  }
+  to {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #ff00de,
+      0 0 8px #ff00de, 0 0 10px #ff00de, 0 0 12px #ff00de;
+  }
+}
+
+
+
