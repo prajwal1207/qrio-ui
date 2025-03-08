@@ -19,7 +19,7 @@ const AboutPage = () => {
             <span className="absolute top-10 -left-10 text-white text-7xl">
               ✦
             </span>
-            <h1 className="text-[15rem] font-bold uppercase text-transparent stroke-1 stroke-white">
+            <h1 className="text-[12rem] font-bold uppercase text-transparent stroke-1 stroke-white">
               OUR STORY
             </h1>
             <span className="absolute bottom-0 -right-2 text-white text-4xl">
@@ -83,7 +83,7 @@ const AboutPage = () => {
               CO-FOUNDERS
             </Heading>
           </div>
-          <div className="flex p-10 justify-evenly items-center flex-wrap">
+          <div className="flex p-10 justify-evenly items-center flex-wrap gap-16">
             {FOUNDER_DETAILS.map((founder) => (
               <ProfileCard
                 description={founder.desc}

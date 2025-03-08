@@ -1,7 +1,10 @@
 import React from "react";
-import sheratonlogo from "../assets/images/testimonials/Sheratonlogo.png";
-import weatherwise from "../assets/images/testimonials/Weatherwiselogo.png";
-import mpilogo from "../assets/images/testimonials/mpilogo.png";
+import sheratonlogo from "../assets/images/clients/Sheraton Tungsten Logo.png";
+import weatherwise from "../assets/images/clients/Weather.png";
+import mpilogo from "../assets/images/clients/MPI.png";
+import watergram from "../assets/images/clients/Watergram.png";
+import nineAngels from "../assets/images/clients/Nine_angels.jpg";
+import hublika from "../assets/images/clients/Untitled design.png";
 import { BiAlarm } from "react-icons/bi";
 
 export interface TestimonyType {
@@ -12,8 +15,8 @@ export interface TestimonyType {
   description: string;
   postion: string;
   logo: string;
+  rating: number;
 }
-
 
 export const TESTIMONIAL: TestimonyType[] = [
   {
@@ -25,6 +28,7 @@ export const TESTIMONIAL: TestimonyType[] = [
       "qrio enhanced our marketing with stunning graphics, videos, and reels, capturing our brand's essence. Their innovative ideas and smooth collaboration exceeded our expectations.",
     postion: "Hotel by Marriott",
     logo: sheratonlogo,
+    rating: 4,
   },
   {
     id: 2,
@@ -34,7 +38,8 @@ export const TESTIMONIAL: TestimonyType[] = [
     description:
       "qrio designed labels perfectly aligning with our brand. Their creativity and attention to detail were outstanding. The collaboration was smooth, and the feedback was great.",
     postion: "",
-    logo: weatherwise,
+    logo: watergram,
+    rating: 4.5,
   },
   {
     id: 3,
@@ -45,6 +50,7 @@ export const TESTIMONIAL: TestimonyType[] = [
       "qrio's videography captured our yarn production process beautifully, enhancing our marketing. The team was creative, attentive, and met all deadlines.",
     postion: "",
     logo: mpilogo,
+    rating: 3,
   },
   {
     id: 4,
@@ -55,6 +61,7 @@ export const TESTIMONIAL: TestimonyType[] = [
       "qrio's videography showcased our weather strips perfectly, highlighting their durability. Their professionalism and creativity made a big impact.",
     postion: "",
     logo: weatherwise,
+    rating: 4,
   },
   {
     id: 5,
@@ -64,23 +71,34 @@ export const TESTIMONIAL: TestimonyType[] = [
     description:
       "qrio designed our brand identity, captured our products' essence in photos, and executed a flawless promotional event. We're thrilled with the results.",
     postion: "",
-    logo: weatherwise,
+    logo: hublika,
+    rating: 3.5,
+  },
+  {
+    id: 5,
+    bgColor: "#FF616D",
+    name: "Nine Angels",
+    icon: <BiAlarm />,
+    description:
+      "qrio designed our brand identity, captured our products' essence in photos, and executed a flawless promotional event. We're thrilled with the results.",
+    postion: "",
+    logo: nineAngels,
+    rating: 3.5,
   },
 ];
 
 // services
 
 // import img10 from '../assets/services page images 00/12085246_20944055.jpg'
-import img1 from '../assets/services page images 00/3276803.jpg'
-import img8 from '../assets/services page images 00/4102879_971.jpg'
-import img9 from '../assets/services page images 00/5453989_2805145.jpg'
-import img4 from '../assets/services page images 00/5f474595917c102fcedb0ae881ad0d85.jpg'
-import img6 from '../assets/services page images 00/7f1d91eef2bac5b609ef5c9229aa4a6d.jpg'
-import img5 from '../assets/services page images 00/aa1d1631e16eb699e8e7c07fd69561d6.jpg'
-import img7 from '../assets/services page images 00/brand identity.png'
-import img3 from '../assets/services page images 00/d52d7cdd20736a01b0978e04ac276d39.jpg'
-import img2 from '../assets/services page images 00/d769e3042056ff35854840a15bc55cb3.jpg'
-
+import img1 from "../assets/services page images 00/3276803.jpg";
+import img8 from "../assets/services page images 00/4102879_971.jpg";
+import img9 from "../assets/services page images 00/5453989_2805145.jpg";
+import img4 from "../assets/services page images 00/5f474595917c102fcedb0ae881ad0d85.jpg";
+import img6 from "../assets/services page images 00/7f1d91eef2bac5b609ef5c9229aa4a6d.jpg";
+import img5 from "../assets/services page images 00/aa1d1631e16eb699e8e7c07fd69561d6.jpg";
+import img7 from "../assets/services page images 00/brand identity.png";
+import img3 from "../assets/services page images 00/d52d7cdd20736a01b0978e04ac276d39.jpg";
+import img2 from "../assets/services page images 00/d769e3042056ff35854840a15bc55cb3.jpg";
 
 export const SERVICES = [
   {
@@ -139,23 +157,31 @@ export const SERVICES = [
   },
 ];
 
+import slide1 from "../assets/Pitchdeck/0.jpg";
+import slide2 from "../assets/Pitchdeck/1.jpg";
+import slide3 from "../assets/Pitchdeck/2.jpg";
+import slide4 from "../assets/Pitchdeck/3.jpg";
+import slide5 from "../assets/Pitchdeck/4.jpg";
+import slide6 from "../assets/Pitchdeck/5.jpg";
+import slide7 from "../assets/Pitchdeck/6.jpg";
+import slide8 from "../assets/Pitchdeck/7.jpg";
+import slide9 from "../assets/Pitchdeck/8.jpg";
+import slide10 from "../assets/Pitchdeck/9.jpg";
+import slide11 from "../assets/Pitchdeck/10.jpg";
 
-
-
-import slide1 from '../assets/Pitchdeck/0.jpg'
-import slide2 from '../assets/Pitchdeck/1.jpg'
-import slide3 from '../assets/Pitchdeck/2.jpg'
-import slide4 from '../assets/Pitchdeck/3.jpg'
-import slide5 from '../assets/Pitchdeck/4.jpg'
-import slide6 from '../assets/Pitchdeck/5.jpg'
-import slide7 from '../assets/Pitchdeck/6.jpg'
-import slide8 from '../assets/Pitchdeck/7.jpg'
-import slide9 from '../assets/Pitchdeck/8.jpg'
-import slide10 from '../assets/Pitchdeck/9.jpg'
-import slide11 from '../assets/Pitchdeck/10.jpg'
-
-export const  PITCHDECK = [slide1,slide2,slide3,slide4,slide5,slide6,slide7,slide8,slide9,slide10,slide11]
-
+export const PITCHDECK = [
+  slide1,
+  slide2,
+  slide3,
+  slide4,
+  slide5,
+  slide6,
+  slide7,
+  slide8,
+  slide9,
+  slide10,
+  slide11,
+];
 
 export const SOCIAL_LINKS = {
   INSTAGRAM: "https://www.instagram.com/qrio.in?igsh=aHJ1enBlbHhwZTc3",
@@ -165,7 +191,7 @@ export const SOCIAL_LINKS = {
   THREAD: "https://www.threads.net/@qrio.in",
   EMAIL: "hello.qrio@gmail.com",
   CONTACT: "+91 9993531777",
-  ADDRESS: '207-Navneet plaza, Palasia, Indore (M.P)'
+  ADDRESS: "207-Navneet plaza, Palasia, Indore (M.P)",
 };
 
 import img_neelanshi from "../assets/images/img-neelanshi.jpg";
@@ -218,5 +244,3 @@ export const CLIENTS_LOGO = [
   { name: "Hublika", logo: hub_logo },
   { name: "Nine Angels", logo: nine_angles },
 ];
-
-

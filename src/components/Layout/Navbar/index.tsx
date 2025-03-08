@@ -28,7 +28,7 @@ const Navbar: React.FC<any> = ({ link, seLink }) => {
             id="brand"
             src={logo}
             alt="qrio"
-            className={styles.navbar_logo_img}
+            className="h-12 object-contain"
           />
         </a>
       </div>

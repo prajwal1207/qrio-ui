@@ -41,7 +41,7 @@ const TestimonialCarousel = () => {
           <TestimonialCard
             companyName={testimony.name}
             testimonialText={testimony.description}
-            rating={4.5}
+            rating={testimony.rating}
             imageUrl={testimony.logo}
           />
         </SwiperSlide>

@@ -12,7 +12,7 @@ const ServicesPage = () => {
           <span className="absolute top-10 -left-10 text-white text-7xl">
             ✦
           </span>
-          <h1 className="text-[15rem] font-bold uppercase text-transparent stroke-1 stroke-white">
+          <h1 className="text-[13rem] font-bold uppercase text-transparent stroke-1 stroke-white">
             Services
           </h1>
           <span className="absolute bottom-0 -right-2 text-white text-4xl">
@@ -25,15 +25,22 @@ const ServicesPage = () => {
       </section>
       <section className="relative h-auto flex items-center justify-center">
         <RightGradiantEffect />
-        <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {SERVICES.map((item, index) => (
-            <ServiceCard
-              key={index}
-              title={item.title}
-              description={item.desc}
-              image={item.icon}
-            />
-          ))}
+        <div className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-3 grid-rows-3 gap-4 p-4">
+            {SERVICES.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center w-full aspect-square "
+              >
+                  <ServiceCard
+                    key={index}
+                    title={item.title}
+                    description={item.desc}
+                    image={item.icon}
+                  />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </main>

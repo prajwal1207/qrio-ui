@@ -80,7 +80,7 @@ const HomePage = () => {
   useGSAP(animateSections);
 
   return (
-    <main style={{ height: "570vh" }} className="py-10">
+    <main style={{ height: "auto" }} className="py-10">
       <section className="relative flex flex-col md:flex-row justify-center items-center">
         <div className="relative w-full md:w-4/5 h-[85vh] flex justify-center items-center">
           <video
@@ -173,7 +173,7 @@ const HomePage = () => {
 
               <Paragraph
                 size="text2xl"
-                className="text-lg md:text-2xl leading-relaxed text-left text-white text-right"
+                className="text-lg md:text-2xl leading-relaxed  text-white text-right"
               >
                 Our mission is to transform brands into legends. <br />
                 How? By crafting marketing strategies that <br />
@@ -185,7 +185,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <section className="h-[120vh] my-32 overflow-hidden">
+      <section className="h-auto my-32 overflow-hidden">
         <div className="my-20 p-20">
           <video
             ref={videoRef}
@@ -199,7 +199,7 @@ const HomePage = () => {
           </video>
         </div>
       </section>
-      <section className="h-auto py-40">
+      <section className="h-auto py-40  items-center">
         <div
           style={{
             transform: "rotate(-6deg)",
@@ -217,14 +217,14 @@ const HomePage = () => {
           <Marquee />
         </div>
         <div className="flex justify-center items-center py-20 flex-col">
-          <Heading size="heading7xl" className="text-white glow-text">
+          <Heading size="heading6xl" className="text-white glow-text">
             Testimonials
           </Heading>
           <Paragraph size="text2xl">
             But don't just take our word for it. Hear from our clients who we've
             helped reach the marketing hall of fame!
           </Paragraph>
-          <div className="container ">
+          <div className="container  py-24">
             <TestimonialCarousel />
           </div>
         </div>
@@ -235,60 +235,4 @@ const HomePage = () => {
 
 export default HomePage;
 
-{
-  /* <BannerSection />
-      <hr className="line_break" />
-      <GalaxyParallax>
-        <AboutSection />
-        <hr className="line_break" />
-        <VisionSection />
-        <hr className="line_break" />
-        <WhyUsSection />
-        <hr className="line_break" />
-        <section className="min-h-screen h-auto mx-auto flex flex-wrap justify-center items-center">
-          <h1 className="text-white py-6 text-5xl md:text-6xl p-2 font-bold glow-text">
-            Quick snapshots of services offered
-          </h1>
-          <div
-            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 `}
-          >
-            {SERVICES.map((item, index: number) => {
-              return <ServiceCard key={index} {...item} />;
-            })}
-          </div>
-        </section>
-        <hr className="line_break" />
-        <section className="w-full min-h-screen h-auto mx-auto flex flex-wrap flex-col justify-center">
-          <h1 className="px-80 text-white py-6 text-5xl md:text-6xl p-2 font-bold glow-text">
-            Testimonials
-          </h1>
-          <p className="px-80 mb-5 text-gray-400 text-md md:text-xl">
-            But don't just take our word for it. Hear from our clients who we've
-            helped reach the marketing hall of fame!
-          </p>
-          <div className="w-full">
-            <TestimonialCarousel />
-          </div>
-        </section>
-        <hr className="line_break" />
-        <section className="container min-h-screen h-auto mx-auto flex flex-wrap justify-center items-center">
-          <div className="flex flex-col items-center">
-            <h1 className="text-white text-6xl md:text-6xl font-bold glow-text">
-              Our Clients
-            </h1>
-            <p className="w-2/3  tracking-wider leading-6 font-bold py-3 text-xl md:text-xl text-gray-400">
-              Driven by Integrity, Powered by Creativity, and Sustained by
-              Coffee – we're the team you call when you want to do more than
-              just market. You want to make a scene.
-            </p>
-          </div>
-          <div className={`w-5/6 ${styles.marqueWrapper}`}>
-            <Marquee items={CLIENTS_LOGO} direction="right" gradient={3} />
-            <Marquee items={CLIENTS_LOGO} gradient={2} />
-            <Marquee items={CLIENTS_LOGO} direction="right" gradient={3} />
-            <Marquee items={CLIENTS_LOGO} gradient={2} direction="right" />
-          </div>
-        </section>
-        <hr className="line_break" />
-      </GalaxyParallax> */
-}
+

@@ -22,7 +22,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       <Img
         src={imageUrl}
         alt={companyName}
-        className="w-36 h-36 object-fill mb-6 rounded-full border-[1px] bg-white opacity-85"
+        className="w-28 h-28 object-contain  mb-6 rounded-full border-[1px] bg-white opacity-85"
       />
       <Heading
         size="headingxl"
