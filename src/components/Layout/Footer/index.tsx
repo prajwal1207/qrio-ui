@@ -41,12 +41,15 @@ const Footer = () => {
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-2">
           <div className="text-gray-300">
             <img src={logo} className="h-28" alt="" />
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis, rem eius doloribus eum repellendus asperiores ipsa
-              illo voluptatibus molestias error quo dolores ut sit magni
-              deleniti, animi aliquam hic. Maxime.
-            </p>
+            <div className="bordered-lg">
+              <iframe
+                title="Google Map"
+                className="rounded-lg w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.067315391517!2d75.88898027587526!3d22.725739227339055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd362ddb5a7b%3A0xeb0d40010b0af295!2sNavneet%20Plaza%2C%20Old%20Palasia%2C%20Indore%2C%20Madhya%20Pradesh%20452001!5e0!3m2!1sen!2sin!4v1738320111055!5m2!1sen!2sin"
+                allowFullScreen
+              ></iframe>
+            </div>
+
             <span className="flex text-md my-2">
               <FaMapMarkerAlt className="text-blue-400 mx-2" />{" "}
               <p> {SOCIAL_LINKS.ADDRESS}</p>
@@ -76,9 +79,6 @@ const Footer = () => {
               </li>
               <li className="text-md hover:text-fuchsia-500 py-2">
                 <Link to="/contact">Contact</Link>
-              </li>
-              <li className="text-md hover:text-fuchsia-500 py-2">
-                <Link to="/blog">Blog</Link>
               </li>
               <li className="text-md hover:text-fuchsia-500 py-2">
                 <Link to="/portfolio">Portfolio</Link>

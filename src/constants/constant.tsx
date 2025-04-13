@@ -190,7 +190,7 @@ export const SOCIAL_LINKS = {
   YOUTUBE: "https://www.youtube.com/@qrio.marketing",
   THREAD: "https://www.threads.net/@qrio.in",
   EMAIL: "hello.qrio@gmail.com",
-  CONTACT: "+91 9993531777",
+  CONTACT: "+91 9131977282",
   ADDRESS: "207-Navneet plaza, Palasia, Indore (M.P)",
 };
 

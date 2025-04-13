@@ -80,45 +80,49 @@ const HomePage = () => {
   useGSAP(animateSections);
 
   return (
-    <main style={{ height: "auto" }} className="py-10">
-      <section className="relative flex flex-col md:flex-row justify-center items-center">
-        <div className="relative w-full md:w-4/5 h-[85vh] flex justify-center items-center">
-          <video
-            autoPlay
-            loop
-            muted
-            className="w-full h-full object-cover rounded-xl"
+    <main style={{ height: "auto" }}>
+      <section className="relative w-full h-screen flex justify-center items-center">
+        {/* Full-screen video */}
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        >
+          <source src={video} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        {/* Content overlay */}
+        <div className="relative z-10 flex flex-col items-center text-center px-6">
+          <Heading
+            size="heading7xl"
+            className="text-transparent bg-clip-text bg-custom-gradient font-bold text-3xl md:text-7xl"
           >
-            <source src={video} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="absolute inset-0 bg-black bg-opacity-50 rounded-xl"></div>
-          <div className="absolute flex flex-col items-center text-center md:text-left w-full px-6 z-10">
-            <Heading
-              size="heading7xl"
-              className="text-transparent bg-clip-text bg-custom-gradient font-bold text-3xl md:text-7xl"
-            >
-              Welcome to qrio
-            </Heading>
-            <Heading
-              size="heading3xl"
-              className="text-center md:text-left text-white text-2xl md:text-4xl"
-            >
-              CURATING YOUR BRAND
-            </Heading>
-            <Paragraph
-              id="banner_desc"
-              className="tracking-wider leading-6 font-bold py-3 text-xl md:text-2xl text-white text-center"
-            >
-              Discover Qrio, where creativity meets quirkiness, and marketing
-              strategies <br /> come with a side of pizzazz. Dive into a world
-              where your brand not only grows but <br />
-              thrives with flair!
-            </Paragraph>
-          </div>
+            Welcome to qrio
+          </Heading>
+          <Heading
+            size="heading3xl"
+            className="text-center md:text-left text-white text-2xl md:text-4xl"
+          >
+            CURATING YOUR BRAND
+          </Heading>
+          <Paragraph
+            id="banner_desc"
+            className="tracking-wider leading-6 font-bold py-3 text-xl md:text-2xl text-white text-center"
+          >
+            Discover Qrio, where creativity meets quirkiness, and marketing
+            strategies <br /> come with a side of pizzazz. Dive into a world
+            where your brand not only grows but <br />
+            thrives with flair!
+          </Paragraph>
         </div>
       </section>
-      <section className="relative h-[100vh] flex items-center justify-center">
+
+      <section className="relative h-auto flex items-center justify-center">
         <RightGradiantEffect />
         <div className="flex h-full w-full">
           <div className="w-1/2 flex flex-col justify-center items-center p-8 space-y-6">
@@ -152,7 +156,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <section className="relative h-[100vh] flex items-center justify-center">
+      <section className="relative h-auto flex items-center justify-center">
         <div className="flex h-full w-full">
           <div className="w-1/2 flex justify-center items-center">
             <Img
@@ -175,11 +179,13 @@ const HomePage = () => {
                 size="text2xl"
                 className="text-lg md:text-2xl leading-relaxed  text-white text-right"
               >
-                Our mission is to transform brands into legends. <br />
-                How? By crafting marketing strategies that <br />
-                are not only effective but also enchanting. <br />
-                Our vision is to lead the marketing revolution <br />
-                from Indore to the world, one campaign at a time.
+                Here’s the deal: We're not just marketers—we’re the <br />
+                Gandalfs of the marketing world. We guide you <br />
+                through the perilous paths of digital realms and <br />
+                traditional mazes, ensuring you emerge as the hero. <br />
+                <br />
+                Why us? Because "average" is not in our vocabulary. <br />
+                (We checked—it’s really not there!)
               </Paragraph>
             </div>
           </div>
@@ -199,7 +205,7 @@ const HomePage = () => {
           </video>
         </div>
       </section>
-      <section className="h-auto py-40  items-center">
+      <section className="h-auto items-center">
         <div
           style={{
             transform: "rotate(-6deg)",
@@ -234,5 +240,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-
