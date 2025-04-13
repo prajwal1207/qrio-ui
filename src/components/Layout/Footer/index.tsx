@@ -28,7 +28,7 @@ const Footer = () => {
 
           <button
             onClick={() => navigate("/contact")}
-            className=" h-12 rounded-full flex items-center justify-end px-5 text-lg font-bold bg-transparent bg-white text-purple-700"
+            className="max-w-48 h-12 rounded-full flex items-center justify-end px-5 text-lg font-bold bg-transparent bg-white text-purple-700"
           >
             Contact Us
             <span className="mx-1">

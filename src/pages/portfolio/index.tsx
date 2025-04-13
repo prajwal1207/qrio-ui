@@ -32,7 +32,7 @@ const PortfolioPage = () => {
           <span className="absolute top-10 -left-10 text-white text-7xl">
             ✦
           </span>
-          <h1 className="text-[11rem] font-bold uppercase text-transparent stroke-1 stroke-white">
+          <h1 className="text-[3rem] sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[11rem] font-bold uppercase text-transparent stroke-1 stroke-white">
             Our Work.
           </h1>
           <span className="absolute bottom-0 -right-2 text-white text-4xl">
@@ -62,7 +62,7 @@ const PortfolioPage = () => {
           <span className="absolute top-10 -left-10 text-white text-7xl">
             ✦
           </span>
-          <h1 className="text-[11rem] font-bold uppercase text-transparent stroke-1 stroke-white">
+          <h1 className="text-[3rem] sm:text-[5rem]  md:text-[6rem] lg:text-[7rem] xl:text-[11rem] font-bold uppercase text-transparent stroke-1 stroke-white">
             Thankyou.
           </h1>
           <span className="absolute bottom-0 -right-2 text-white text-4xl">

@@ -100,19 +100,19 @@ const HomePage = () => {
         <div className="relative z-10 flex flex-col items-center text-center px-6">
           <Heading
             size="heading7xl"
-            className="text-transparent bg-clip-text bg-custom-gradient font-bold text-3xl md:text-7xl"
+            className="text-transparent bg-clip-text bg-custom-gradient font-bold text-5xl md:text-6xl lg:text-7xl"
           >
             Welcome to qrio
           </Heading>
           <Heading
             size="heading3xl"
-            className="text-center md:text-left text-white text-2xl md:text-4xl"
+            className="text-center md:text-left text-white text-xl sm:text-2xl  md:text-4xl"
           >
             CURATING YOUR BRAND
           </Heading>
           <Paragraph
             id="banner_desc"
-            className="tracking-wider leading-6 font-bold py-3 text-xl md:text-2xl text-white text-center"
+            className="tracking-wider leading-6 font-bold py-3 text-lg sm:text-xl md:text-2xl text-white text-center"
           >
             Discover Qrio, where creativity meets quirkiness, and marketing
             strategies <br /> come with a side of pizzazz. Dive into a world
@@ -124,19 +124,19 @@ const HomePage = () => {
 
       <section className="relative h-auto flex items-center justify-center">
         <RightGradiantEffect />
-        <div className="flex h-full w-full">
-          <div className="w-1/2 flex flex-col justify-center items-center p-8 space-y-6">
+        <div className="flex flex-col md:flex-row h-full w-full items-center ">
+          <div className="w-1/2 flex flex-col justify-center items-center p-8 space-y-6 ">
             <div>
               <Heading
                 size="heading7xl"
-                className="text-transparent bg-clip-text bg-custom-gradient font-bold text-3xl md:text-7xl"
+                className="text-transparent bg-clip-text bg-custom-gradient font-bold text-5xl md:text-6xl lg:text-7xl"
               >
                 MISSION <br /> & VISION
               </Heading>
 
               <Paragraph
                 size="text2xl"
-                className="text-lg md:text-2xl leading-relaxed text-left text-white"
+                className="text-lg md:text-2xl leading-relaxed  text-center  md:text-left text-white"
               >
                 Our mission is to transform brands into legends. <br />
                 How? By crafting marketing strategies that <br />
@@ -157,7 +157,7 @@ const HomePage = () => {
         </div>
       </section>
       <section className="relative h-auto flex items-center justify-center">
-        <div className="flex h-full w-full">
+        <div className="flex h-full w-full flex-col-reverse md:flex-row items-center">
           <div className="w-1/2 flex justify-center items-center">
             <Img
               src={img2}
@@ -165,11 +165,11 @@ const HomePage = () => {
               className="max-w-[80%] max-h-[80%] object-contain rounded-xl"
             />
           </div>
-          <div className="w-1/2 flex flex-col justify-center items-center text-right p-8 space-y-6">
+          <div className="w-1/2 flex flex-col justify-center items-center text-center  md:text-right p-8 space-y-6">
             <div>
               <Heading
                 size="heading7xl"
-                className="text-transparent bg-clip-text bg-custom-gradient font-bold text-3xl md:text-7xl "
+                className="text-transparent bg-clip-text bg-custom-gradient font-bold text-5xl md:text-6xl lg:text-7xl "
               >
                 <span className="text-6xl">WHY</span> <br />{" "}
                 <strong> QRIO ?</strong>
@@ -177,7 +177,7 @@ const HomePage = () => {
 
               <Paragraph
                 size="text2xl"
-                className="text-lg md:text-2xl leading-relaxed  text-white text-right"
+                className="text-lg md:text-2xl leading-relaxed  text-white text-center  md:text-right    "
               >
                 Here’s the deal: We're not just marketers—we’re the <br />
                 Gandalfs of the marketing world. We guide you <br />
