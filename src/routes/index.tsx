@@ -10,7 +10,7 @@ import ContactPage from "../pages/contact";
 
 const Routing: React.FC = () => {
   return (
-    <BrowserRouter basename="/qrio-ui" >
+    <BrowserRouter basename="/" >
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
