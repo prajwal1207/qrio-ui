@@ -82,7 +82,6 @@ const HomePage = () => {
   return (
     <main style={{ height: "auto" }}>
       <section className="relative w-full h-screen flex justify-center items-center">
-        {/* Full-screen video */}
         <video
           autoPlay
           loop
@@ -97,97 +96,75 @@ const HomePage = () => {
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
         {/* Content overlay */}
-        <div className="relative z-10 flex flex-col items-center text-center px-6">
-          <Heading
-            size="heading7xl"
-            className="text-transparent bg-clip-text bg-custom-gradient font-bold text-5xl md:text-6xl lg:text-7xl"
-          >
+        <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 md:px-12">
+          <h1 className="text-transparent bg-clip-text bg-custom-gradient font-bold text-4xl sm:text-6xl md:text-7xl lg:text-[80px] leading-tight">
             Welcome to qrio
-          </Heading>
+          </h1>
           <Heading
             size="heading3xl"
-            className="text-center md:text-left text-white text-xl sm:text-2xl  md:text-4xl"
+            className="text-center text-white text-xl sm:text-2xl md:text-4xl mt-4"
           >
             CURATING YOUR BRAND
           </Heading>
           <Paragraph
             id="banner_desc"
-            className="tracking-wider leading-6 font-bold py-3 text-lg sm:text-xl md:text-2xl text-white text-center"
+            className="tracking-wider leading-6 font-bold py-3 text-base sm:text-lg md:text-xl text-white text-center max-w-[90%] sm:max-w-[80%] md:max-w-[70%]"
           >
             Discover Qrio, where creativity meets quirkiness, and marketing
-            strategies <br /> come with a side of pizzazz. Dive into a world
-            where your brand not only grows but <br />
-            thrives with flair!
+            strategies come with a side of pizzazz. Dive into a world where
+            your brand not only grows but thrives with flair!
           </Paragraph>
         </div>
       </section>
 
-      <section className="relative h-auto flex items-center justify-center">
+      <section className="relative h-auto flex flex-col items-center justify-center px-4 py-12 md:flex-row md:py-20 container mx-auto">
         <RightGradiantEffect />
-        <div className="flex flex-col md:flex-row h-full w-full items-center ">
-          <div className="w-1/2 flex flex-col justify-center items-center p-8 space-y-6 ">
-            <div>
-              <Heading
-                size="heading7xl"
-                className="text-transparent bg-clip-text bg-custom-gradient font-bold text-5xl md:text-6xl lg:text-7xl"
-              >
-                MISSION <br /> & VISION
-              </Heading>
-
-              <Paragraph
-                size="text2xl"
-                className="text-lg md:text-2xl leading-relaxed  text-center  md:text-left text-white"
-              >
-                Our mission is to transform brands into legends. <br />
-                How? By crafting marketing strategies that <br />
-                are not only effective but also enchanting. <br />
-                Our vision is to lead the marketing revolution <br />
-                from Indore to the world, one campaign at a time.
-              </Paragraph>
-            </div>
+        <div className="flex flex-col md:flex-row h-full w-full  ">
+          <div className="w-full md:w-1/2 flex flex-col justify-center  p-4 md:p-8 space-y-6 text-center md:text-left ">
+            <h1 className="text-transparent bg-clip-text bg-custom-gradient font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl  ">
+              MISSION <br /> & VISION
+            </h1>
+            <p className="text-base sm:text-lg md:text-2xl leading-relaxed text-white">
+              Our mission is to transform brands into legends. <br />
+              How? By crafting marketing strategies that <br />
+              are not only effective but also enchanting. <br />
+              Our vision is to lead the marketing revolution <br />
+              from Indore to the world, one campaign at a time.
+            </p>
           </div>
-
-          <div className="w-1/2 flex justify-center items-center">
+          <div className="w-full  md:w-1/2 flex justify-center items-center p-4 ">
             <Img
               src={img1}
               alt="Mission & Vision"
-              className="max-w-[80%] max-h-[80%] object-contain rounded-xl"
+              className="w-full max-w-[80%] object-contain rounded-xl"
             />
           </div>
         </div>
       </section>
-      <section className="relative h-auto flex items-center justify-center">
-        <div className="flex h-full w-full flex-col-reverse md:flex-row items-center">
-          <div className="w-1/2 flex justify-center items-center">
+
+      <section className="relative h-auto flex flex-col items-center justify-center px-4 py-12 md:flex-row-reverse md:py-20 container mx-auto">
+        <div className="flex flex-col-reverse md:flex-row h-full w-full items-center">
+          <div className="w-full md:w-1/2 flex justify-center items-center p-4">
             <Img
               src={img2}
               alt="Mission & Vision"
-              className="max-w-[80%] max-h-[80%] object-contain rounded-xl"
+              className="w-full max-w-[80%] object-contain rounded-xl"
             />
           </div>
-          <div className="w-1/2 flex flex-col justify-center items-center text-center  md:text-right p-8 space-y-6">
-            <div>
-              <Heading
-                size="heading7xl"
-                className="text-transparent bg-clip-text bg-custom-gradient font-bold text-5xl md:text-6xl lg:text-7xl "
-              >
-                <span className="text-6xl">WHY</span> <br />{" "}
-                <strong> QRIO ?</strong>
-              </Heading>
-
-              <Paragraph
-                size="text2xl"
-                className="text-lg md:text-2xl leading-relaxed  text-white text-center  md:text-right    "
-              >
-                Here’s the deal: We're not just marketers—we’re the <br />
-                Gandalfs of the marketing world. We guide you <br />
-                through the perilous paths of digital realms and <br />
-                traditional mazes, ensuring you emerge as the hero. <br />
-                <br />
-                Why us? Because "average" is not in our vocabulary. <br />
-                (We checked—it’s really not there!)
-              </Paragraph>
-            </div>
+          <div className="w-full md:w-1/2 flex flex-col justify-center  text-center md:text-right p-4 md:p-8 space-y-6 ">
+            <h1 className="text-transparent bg-clip-text bg-custom-gradient font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+              <span className="text-4xl sm:text-6xl">WHY</span> <br />
+              <strong> QRIO ?</strong>
+            </h1>
+            <p className="text-base sm:text-lg md:text-2xl leading-relaxed text-white">
+              Here’s the deal: We're not just marketers—we’re the <br />
+              Gandalfs of the marketing world. We guide you <br />
+              through the perilous paths of digital realms and <br />
+              traditional mazes, ensuring you emerge as the hero. <br />
+              <br />
+              Why us? Because "average" is not in our vocabulary. <br />
+              (We checked—it’s really not there!)
+            </p>
           </div>
         </div>
       </section>
@@ -223,13 +200,13 @@ const HomePage = () => {
           <Marquee />
         </div>
         <div className="flex justify-center items-center py-20 flex-col">
-          <Heading size="heading6xl" className="text-white glow-text">
+          <h1  className="text-white glow-text font-bold  text-4xl md:text-6xl ">
             Testimonials
-          </Heading>
-          <Paragraph size="text2xl">
+          </h1>
+          <p >
             But don't just take our word for it. Hear from our clients who we've
             helped reach the marketing hall of fame!
-          </Paragraph>
+          </p>
           <div className="container  py-24">
             <TestimonialCarousel />
           </div>
